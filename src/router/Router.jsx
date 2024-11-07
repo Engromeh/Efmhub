@@ -10,6 +10,8 @@ import ReferralContestPage from "../Pages/ReferralContestPage/ReferralContestPag
 import Login from "../Pages/Login/Login";
 import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
 import SingUp from "../Pages/SingUp/SingUp";
+import DashboardLayout from "../Layout/DashBoardLayout";
+import { ChakraProvider } from "@chakra-ui/react";
 
 
 const Router =createBrowserRouter(
@@ -25,6 +27,11 @@ const Router =createBrowserRouter(
 <Route path="/SingUp" element={<SingUp/>} />
 
 
+<Route path="/dashboard" element={<ChakraProvider>
+  <DashboardLayout/>
+</ChakraProvider>}>
+
+</Route>
       </>  
     )
 
