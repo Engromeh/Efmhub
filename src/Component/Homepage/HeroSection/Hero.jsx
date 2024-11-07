@@ -1,10 +1,11 @@
 import './Hero.css'
 import photo2 from '../../../../photo/photo2.svg'
+import emLogo from "../../../../photo/Vector 1.svg"
 const Hero = () => {
   return (
     <section>
-     <div className="welcome-section">
-    <h1 className='welcome-text'>Welcome to <span className="highlight">EFM </span> hub</h1>
+     <div className="welcome-section ">
+    <h1 className='welcome-text'>Welcome to <span className="highlight relative">EFM  <img src={emLogo} alt="" className='absolute'/></span> hub</h1>
     <img src={photo2} alt="Welcome Image" className="welcome-image" />
 </div>
 
