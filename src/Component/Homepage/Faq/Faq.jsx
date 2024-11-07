@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './Faq.css';
+import { ChevronUpIcon } from '@heroicons/react/16/solid';
+import { ChevronDownIcon } from '@heroicons/react/16/solid';
 
 const faqData = [
     { question: "How to start?", answer: "You can start by signing up on our platform and completing the registration process. Once registered, you’ll have access to all the tools and resources to help you get started." },
@@ -31,23 +33,27 @@ const Faq = () => {
 
     return (
         <>
-        <div className="section-divider"></div>
-<h2 style={{textAlign:'center' , color: 'black'}}>FAQ</h2>
-        <div className="faq-container">
-            {faqData.map((item, index) => (
-                <div key={index} className={`faq-item ${activeIndex === index ? 'active' : ''}`}>
-                    <div className="faq-question" onClick={() => toggleAnswer(index)}>
-                        {item.question}
-                        <span className="arrow">{activeIndex === index ? '▲' : '▼'}</span>
-                    </div>
-                    {activeIndex === index && (
-                        <div className="faq-answer">
-                            {item.answer}
+            <div className="section-divider"></div>
+            <h2 style={{ textAlign: 'center', color: 'black' }}>FAQ</h2>
+            <div className="faq-container">
+                {faqData.map((item, index) => (
+                    <div key={index} className={`faq-item ${activeIndex === index ? 'active' : ''}`}>
+                        <div className="faq-question" onClick={() => toggleAnswer(index)}>
+                            {item.question}
+                            {activeIndex === index ? (
+                                <ChevronUpIcon className="icon-faq"  />
+                            ) : (
+                                <ChevronDownIcon className="icon-faq" />
+                            )}
                         </div>
-                    )}
-                </div>
-            ))}
-        </div>
+                        {activeIndex === index && (
+                            <div className="faq-answer">
+                                {item.answer}
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
         </>
     );
 };

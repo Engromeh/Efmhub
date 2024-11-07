@@ -1,141 +1,54 @@
-.referral-contest-page {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  .referral-title {
-    background-color: #d3a15a;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    display: inline-block;
-  }
-  
-  .referral-description {
-    font-size: 0.9em;
-    color: #666;
-    margin: 10px 0;
-  }
-  
-  .tabs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .tab {
-    padding: 8px 12px;
-    background-color: white;
-    border: 1px solid #d3a15a;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #d3a15a;
-    font-weight: bold;
-  }
-  
-  .tab.active {
-    background-color: #d3a15a;
-    color: white;
-  }
-  
-  .tab:hover {
-    background-color: #d3a15a;
-    color: white;
-  }
-  
-  .contest-table {
-    width: 100%;
-    margin-top: 20px;
-  }
-  
-  .table-header {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    color: #aaa;
-    padding: 10px 0;
-  }
-  
-  .header-rank {
-    width: 20%;
-    text-align: center;
-  }
-  
-  .header-name {
-    width: 80%;
-    text-align: left;
-  }
-  
-  .contest-row {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    justify-content: space-between;
-    font-size: 0.9em;
-  }
-  
-  .contest-row.highlighted {
-    background-color: #fff6e0;
-    border: 1px solid #d3a15a;
-  }
-  
-  .rank {
-    width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #d3a15a;
-  }
-  
-  .trophy-icon {
-    margin-right: 5px;
-  }
-  
-  .name {
-    width: 60%;
-    text-align: left;
-    color: #333;
-  }
-  
-  .details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 20%;
-    font-size: 0.85em;
-    color: #888;
-  }
-  
-  .detail {
-    margin-top: 2px;
-    font-weight: bold;
-    color: #d3a15a;
-  }
-  
-  .label {
-    color: #aaa;
-    font-weight: normal;
-    margin-left: 5px;
-  }
-  
-  
-  .rafelr-image{
-    width: 260px;
-    margin-left: 629px;
-    margin-top: 90px;
-  }
-  @media (max-width: 768px) {
-    .rafelr-image {
-      width: 150px; 
-      margin-left: 120px; 
-      margin-right: auto; 
-      margin-top: 60px; 
-    }
-  }
+.referral-contest {
+  text-align: center;
+  margin-top: 20px;
+}
+.referral-image{
+  margin-left: 451px;
+  margin-top: 112px;
+  width: 574px;
+  height: 332px;
+}
+.titel-refelr{
+  color: brown;
+}
+.time-filters button {
+  background-color: transparent;
+  border: 1px solid #d4a65d;
+  color: #d4a65d;
+  padding: 5px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.time-filters .active-tab {
+  background-color: #d4a65d;
+  color: white;
+}
+
+.ranking-table {
+  margin-top: 20px;
+}
+
+.table-header, .table-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+
+.table-header {
+  font-weight: bold;
+  background-color: #f9f9f9;
+}
+
+.table-row:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.rank, .name, .joining-date, .days-count, .referrals {
+  flex: 1;
+  text-align: center;
+}

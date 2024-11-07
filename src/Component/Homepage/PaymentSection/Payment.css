@@ -84,8 +84,9 @@
 }
 
 .payment-logos img {
-  height: 60px;
   opacity: 0.7;
+    width: 151px;
+    margin-top: 36px;
 }
 
 .section-divider {

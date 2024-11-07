@@ -12,6 +12,7 @@
 .welcome-section h1 {
     font-size: 2em;
     color: #000000;
+    margin-top: 10px;
 }
 
 .welcome-section .highlight {
@@ -29,10 +30,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 350px;
+    gap: 550px;
     padding: 20px 0;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
+    
 }
 
 .stat-item {
@@ -84,38 +86,54 @@
     transform-origin: left;
 }
 
-/* تحسين التنسيق لشاشات الهواتف */
-@media (max-width: 768px) {
+.statistics-section {
+    display: flex;
+    flex-direction: row; 
+    gap: 189px;
+    padding: 20px 0;
+}
+
+
+@media (max-width: 600px) { 
     .statistics-section {
-        flex-direction: column; /* جعل الإحصائيات تظهر في عمود */
-        gap: 20px; /* تقليل الفجوة بين العناصر */
-        padding: 10px 0;
+        flex-direction: column;
+        gap: 52px; 
     }
 
     .stat-item .number {
-        font-size: 1.5em; /* تصغير حجم الأرقام */
+        font-size: 1.2em; 
+        text-align: center; 
     }
 
     .stat-item .label {
-        font-size: 0.9em; /* تصغير حجم النص */
+        font-size: 1em; 
+        text-align: center; 
     }
 
     .welcome-section h1 {
-        font-size: 1.5em; /* تصغير حجم العنوان */
+        font-size: 1.3em; 
+        text-align: center; 
     }
 
     .welcome-image {
-        max-width: 100%; /* تصغير عرض الصورة */
-        margin-top: 15px;
+        max-width: 80%; 
+        margin: 0 auto; 
+    }
 
+    .social-icons {
+        flex-direction: row; /* تنظيم الأيقونات في صف */
+        gap: 10px; 
+        justify-content: center; 
     }
 
     .section-divider-Hero {
-        width: 100%; /* جعل الخط الفاصل يأخذ عرض الشاشة بالكامل */
-        margin-left: 0;
+        width: 100%; 
+        margin: 10px 0; 
     }
 
-    .welcome-text {
-        font-size: 1.5em; /* تصغير حجم النص */
+    .footer-bottom {
+        flex-direction: column; 
+        text-align: center;
+        gap: 10px; 
     }
 }

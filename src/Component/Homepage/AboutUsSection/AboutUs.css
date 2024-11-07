@@ -23,6 +23,7 @@
     border-radius: 10px;
     color:#DFBC8A;
     width: 365px;
+    margin-bottom: -40px;
 }
 
 .about-section-content {
@@ -61,12 +62,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 234px;
+    width: 246px;
     height: 81px;
     border: 1px solid #DFBC8A; /* لون ذهبي فاتح */
     border-radius: 12px;
     padding: 10px 20px;
     text-align: center;
+    margin-right: 50px;
   }
   
   .efm-logo {
@@ -129,6 +131,7 @@
     .about-section-icon-text {
         justify-content: center;
         text-align: center;
+        margin-left: -30px;
     }
 
     .about-section-goal-card, .about-section-vision-card {

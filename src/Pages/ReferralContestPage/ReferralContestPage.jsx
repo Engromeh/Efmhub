@@ -1,7 +1,7 @@
 import { useState } from 'react';
-
 import './ReferralContestPage.css';
-import photo from '../../../photo/refelr.svg'
+import photo from '../../../photo/refelr.svg';
+
 function ReferralContestPage() {
   const data = {
     'Last 24 hours': [
@@ -30,52 +30,47 @@ function ReferralContestPage() {
 
   return (
     <>
-    <h2 style={{color:'black', textAlign:'center' }} >Total subscribers  <span style={{backgroundColor:'#d3a15a' , borderRadius:'10PX', color:'white'}}>114</span> </h2>
-    <img src={photo}  alt='photo' className="rafelr-image"/>
-   
+      <h2 className='titel-refelr'>
+        Total subscribers <span style={{ backgroundColor: '#d3a15a', borderRadius: '10px', color: 'white', padding: '2px 8px' }}>114</span>
+      </h2>
+      <img src={photo} alt='Referral' className="referral-image" />
 
-    <div className="referral-contest-page">
-      <h3 className="referral-title">Referral Contest</h3>
-      <p className="referral-description">
-        Get financial rewards when you encourage your friends to join EFMhub through your referral link.
-      </p>
-      <div className="tabs">
-        {Object.keys(data).map((tab) => (
-          <button
-            key={tab}
-            className={`tab ${activeTab === tab ? 'active' : ''}`}
-            onClick={() => handleTabClick(tab)}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
-
-      <div className="contest-table">
-        <div className="table-header">
-          <span className="header-rank">Rank</span>
-          <span className="header-name">Name</span>
+      <div className="referral-contest">
+        <h3>Referral Contest</h3>
+        <p>Get financial rewards when you encourage your friends to join EFMhub through your referral link.</p>
+        
+        <div className="time-filters">
+          {Object.keys(data).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => handleTabClick(tab)}
+              className={activeTab === tab ? 'active-tab' : ''}
+            >
+              {tab}
+            </button>
+          ))}
         </div>
-        {data[activeTab].map((contestant, index) => (
-          <div key={index} className={`contest-row ${contestant.rank === 1 ? "highlighted" : ""}`}>
-            <div className="rank">
-              <span className="trophy-icon">🏆</span>
-              <span>{contestant.rank}</span>
-            </div>
-            <div className="name">{contestant.name}</div>
-            {contestant.rank === 1 && (
-              <div className="details">
-                <span className="detail">{contestant.joiningDate} <span className="label">Joining Date</span></span>
-                <span className="detail">{contestant.daysCount} <span className="label">Days Count</span></span>
-                <span className="detail">{contestant.referrals} <span className="label">Referrals</span></span>
-              </div>
-            )}
+
+        <div className="ranking-table">
+          <div className="table-header">
+            <span>Rank</span>
+            <span>Name</span>
+            <span>Joining Date</span>
+            <span>Days Count</span>
+            <span>Referrals</span>
           </div>
-        ))}
+
+          {data[activeTab].map((item) => (
+            <div key={item.rank} className="table-row">
+              <span className="rank">{item.rank}</span>
+              <span className="name">{item.name}</span>
+              <span className="joining-date">{item.joiningDate}</span>
+              <span className="days-count">{item.daysCount}</span>
+              <span className="referrals">{item.referrals}</span>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
- 
- 
     </>
   );
 }

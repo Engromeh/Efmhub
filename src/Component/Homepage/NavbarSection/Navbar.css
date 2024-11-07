@@ -90,7 +90,8 @@
   }
 
   .nav.open {
-    display: flex; /* إظهار القائمة عند النقر على زر الـ hamburger */
+    display: flex;
+    margin-top: 12px; /* إظهار القائمة عند النقر على زر الـ hamburger */
   }
 
   .nav ul {

@@ -33,6 +33,13 @@
     background-color: #fff4e5; /* خفيف من اللون البرتقالي */
     border-top: 1px solid #f0e1c8;
 }
+.icon-faq {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    color: #DFBC8A; /* لون الأيقونة */
+}
+
 
 .arrow {
     font-size: 1.2em;

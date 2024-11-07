@@ -7,6 +7,7 @@ import {
 import Layout from '../Layout/Layout';
 import Homepage from "../Pages/Homepage/Homepage";
 import ReferralContestPage from "../Pages/ReferralContestPage/ReferralContestPage";
+import Login from "../Pages/Login/Login";
 
 
 const Router =createBrowserRouter(
@@ -17,7 +18,7 @@ const Router =createBrowserRouter(
 <Route index element={<Homepage/>} />
 <Route path="/ReferralContestPage" element={<ReferralContestPage/>} />
 </Route>
-
+<Route path='/Login' element={<Login/>} />
 
 
       </>  
