@@ -40,6 +40,8 @@ const Aboutus = () => {
                     <p>To be the first true online platform to provide passive income to all social classes and help the largest number of smartphone users worldwide achieve financial security.</p>
                 </div>
             </div>
+            <div className="section-dividerse"></div>
+
         </div>
     );
 };

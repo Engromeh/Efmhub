@@ -8,7 +8,6 @@
     position: fixed;
     top: 0;
     margin-right: 1345px;
-    
   }
   
   .navbar-logo {
@@ -43,7 +42,6 @@
     padding-top: 80px; /* لتجنب التداخل مع شريط التنقل */
     justify-content: center;
     align-items: center;
-
   }
   
   /* الجانب الأيسر */
@@ -57,7 +55,6 @@
     background-color: #f9f9f9;
     color: #333;
     text-align: left;
-        margin-left: 60px
   }
   
   .login-left h1 {
@@ -74,7 +71,7 @@
   .logo-login {
     width: 50px;
     margin-bottom: 20px;
-    margin-right: 1190px;
+    margin-right: 1270px;
   }
   
   /* النموذج */
@@ -170,7 +167,6 @@
     text-decoration: none;
     font-size: 1.5em;
     transition: color 0.3s ease;
-    text-align: center;
   }
   
   .social-icons a:hover {

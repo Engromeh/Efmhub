@@ -7,8 +7,8 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(207, 191, 191, 0.1);
-    width: 100%;
-    max-width: 900px;
+    width: 1130px;
+ 
 }
 
 .outer-frame {
@@ -67,11 +67,6 @@
 
 /* استعلامات الوسائط لتصميم الهاتف */
 @media (max-width: 768px) {
-    .profile-container {
-        flex-direction: column; /* اجعل الترتيب عموديًا */
-        align-items: center; /* محاذاة المحتوى في المنتصف */
-        padding: 15px;
-    }
 
     .outer-frame {
         height: auto; /* ضبط الارتفاع تلقائيًا */
@@ -93,4 +88,21 @@
         font-size: 0.9em; /* تقليل حجم النص */
         text-align: center; /* محاذاة النص في المنتصف */
     }
+    @media (max-width: 992px) {
+        .profile-container {
+            width: 90%; /* تقليل العرض ليملأ الشاشة بنسبة مناسبة */
+            flex-direction: column; /* تغيير التوزيع ليصبح عموديًا */
+            padding: 15px; /* تقليل الحشو */
+        }
+    }
+    
+    /* استعلامات الوسائط للشاشات الصغيرة */
+    @media (max-width: 768px) {
+        .profile-container {
+            width: 100%; /* عرض كامل للشاشة */
+            padding: 10px; /* تقليل الحشو أكثر للشاشات الصغيرة */
+            gap: 10px; /* تقليل الفجوة بين العناصر */
+        }
+    }
 }
+

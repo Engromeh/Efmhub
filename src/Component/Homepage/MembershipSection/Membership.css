@@ -129,9 +129,31 @@
 }
 
 .section-divider {
-    width: 370px;
+    width: 275px;
     height: 2px;
-    background-color: #d3a15a;
-    margin-left: 293px;
+    background-color: #DFBC8A;
+    margin-left: 427px;
     margin-bottom: 1px;
 }
+  }
+  
+  @media (max-width: 768px) {
+    .section-divider {
+      width: 90%; 
+    }
+  }
+
+  .section-dividers {
+    width: 275px;
+    height: 2px;
+    background-color: #DFBC8A;
+    margin-left: 427px;
+    margin-bottom: 1px;
+}
+  }
+  
+  @media (max-width: 768px) {
+    .section-divider {
+      width: 90%; 
+    }
+  }

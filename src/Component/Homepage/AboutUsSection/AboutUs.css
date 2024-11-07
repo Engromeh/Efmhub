@@ -12,7 +12,22 @@
     font-size: 1.2em;
     color: #333;
 }
-
+.section-dividerse {
+    width: 80%; 
+    max-width: 300px;
+    height: 2px; 
+    background-color: #d3a15a; 
+    margin: 20px auto; 
+    border-radius: 1px;
+    opacity: 0.8; 
+  }
+  
+  @media (max-width: 768px) {
+    .section-divider {
+      width: 90%; 
+    }
+  }
+  
 .about-section-icon-text {
     display: flex;
     align-items: center;

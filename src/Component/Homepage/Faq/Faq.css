@@ -40,7 +40,22 @@
     color: #DFBC8A; /* لون الأيقونة */
 }
 
-
+.section-divider {
+    width: 80%; 
+    max-width: 300px;
+    height: 2px; 
+    background-color: #d3a15a; 
+    margin: 20px auto; 
+    border-radius: 1px;
+    opacity: 0.8; 
+  }
+  
+  @media (max-width: 768px) {
+    .section-divider {
+      width: 90%; 
+    }
+  }
+  
 .arrow {
     font-size: 1.2em;
     color: #DFBC8A;

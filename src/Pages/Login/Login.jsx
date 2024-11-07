@@ -1,7 +1,13 @@
 import './Login.css';
 import photo from '../../../photo/login.svg'; 
-import logooo from '../../../photo/logo2.svg'
+import logooo from '../../../photo/logo2.svg';
+import Telegram from '../../../photo/telegram.png';
+import face from '../../../photo/facebook.png';
+import LinkedIn from '../../../photo/linkedin-logo.png'
+import { useNavigate } from 'react-router-dom';
+
 function Login() {
+   const navgate =useNavigate();
   return (
     <div className="login-container">
       <div className="login-left">
@@ -12,7 +18,7 @@ function Login() {
         </p>
         <p>Welcome back! Please login to your account.</p>
         <br/>
-        <br/>
+        
         <form className="login-form">
           <input type="email" placeholder="Email" />
           <div className="password-container">
@@ -20,18 +26,19 @@ function Login() {
           </div>
           <div className="options">
             <label>
-              <input type="checkbox" /> Remember Me
+              <input type="checkbox"  className='checkbox-login'/> Remember Me
             </label>
-            <a href="#">Forgot Password?</a>
+            <a href="/ForgetPassword">Forgot Password?</a>
           </div>
           <button type="submit" className="login-btn">Login</button>
-          <button type="button" className="signup-btn">Sign Up</button>
+          <button type="button" className="signup-btn" onClick={()=>navgate('/SingUp')}>Sign Up</button>
         </form>
         
         <div className="social-icons">
-          <a href="#"><i className="icon-telegram">T</i></a>
-          <a href="#"><i className="icon-facebook">F</i></a>
-          <a href="#"><i className="icon-linkedin">L</i></a>
+
+   <img src={Telegram} alt='face' className="icon" />
+                    <img src={face} alt='face' className="icon" />
+                    <img src={LinkedIn} alt='face' className="icon" />
           <span>@EFM Hub</span>
         </div>
       </div>
@@ -45,7 +52,7 @@ function Login() {
 
 
           <li><a href="#">Home</a></li>
-          <li><a href="#">About us</a></li>
+          <li><a href="#">AboutUs</a></li>
           <li><a href="#">Pricing</a></li>
         </ul>
       </nav>

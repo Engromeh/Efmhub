@@ -8,6 +8,8 @@ const Membership = () => {
 
 <div className="membership-container">
             <h2>Membership benefits</h2>
+            <div className="section-dividers"></div>
+
             <p className="intro-text">
                 On the occasion of our company's opening, we are pleased to offer you very strong deals and discounts. Don't miss the opportunity!
             </p>
@@ -50,6 +52,7 @@ const Membership = () => {
                 </div>
             </div>
         </div>
+        <div className="section-divider"></div>
 
 </>
       

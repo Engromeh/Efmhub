@@ -1,0 +1,75 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.balance-card {
+  background-color: #000000;
+  padding: 25px;
+  text-align: left;
+}
+
+.balance-amount {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.stats-card {
+  background-color: #000000;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.general-stats-card {
+  background-color: #000000;
+  padding: 20px;
+  text-align: left;
+}
+
+.general-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.general-stats div {
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.tasks-card {
+  background-color: #0080ff;
+  padding: 20px;
+  text-align: left;
+}
+
+.task-status {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
