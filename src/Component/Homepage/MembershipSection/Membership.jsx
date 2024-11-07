@@ -11,7 +11,7 @@ const Membership = () => {
             <div className="section-dividers"></div>
 
             <p className="intro-text">
-                On the occasion of our company's opening, we are pleased to offer you very strong deals and discounts. Don't miss the opportunity!
+                On the occasion of our companys opening, we are pleased to offer you very strong deals and discounts. Don't miss the opportunity!
             </p>
             <div className="benefits-grid">
                 <div className="left-side">
@@ -37,7 +37,7 @@ const Membership = () => {
     <p><strong>Commission from companies</strong>
     Complete a successful marketing process for companies or clients, and you will receive 2.5% of the contract value with this company. <em>This offer continues if the client renews their contract with us.</em></p>
     
-    <p><strong>But that's not all!</strong>
+    <p><strong>But thats not all!</strong>
     You will also earn from the investment portfolio of ENG MONEY, which operates in the field of global financial markets investment for a lifetime.</p>
 </div>
 

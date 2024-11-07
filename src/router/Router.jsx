@@ -10,8 +10,6 @@ import ReferralContestPage from "../Pages/ReferralContestPage/ReferralContestPag
 import Login from "../Pages/Login/Login";
 import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
 import SingUp from "../Pages/SingUp/SingUp";
-import Dashbordlayout from "../Layout/Dashbordlayout";
-import Dashbord from "../Pages/Dashbord/Dashbord";
 
 
 const Router =createBrowserRouter(
@@ -26,11 +24,7 @@ const Router =createBrowserRouter(
 <Route path="/ForgetPassword" element={<ForgetPassword/>} />
 <Route path="/SingUp" element={<SingUp/>} />
 
-<Route path="/Dashbord" element={<Dashbordlayout/>} >
-<Route index element={<Dashbord/>} />
 
-  
-</Route>
       </>  
     )
 
