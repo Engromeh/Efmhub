@@ -33,7 +33,6 @@ const Faq = () => {
 
     return (
         <>
-            <div className="section-divider"></div>
             <h2 style={{ textAlign: 'center', color: 'black' }}>FAQ</h2>
             <div className="faq-container">
                 {faqData.map((item, index) => (

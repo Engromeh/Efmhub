@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './ReferralContestPage.css';
 import photo from '../../../photo/refelr.svg';
-
+import trophy from '../../../photo/trophy-star 1.svg';
 function ReferralContestPage() {
   const data = {
     'Last 24 hours': [
-      { rank: 1, name: "Mohamed Khatab", joiningDate: "01/01/2023", daysCount: "1", referrals: "10" },
+      { rank: 1, name: "mohamed khatab", joiningDate: "01/01/2023", daysCount: "1", referrals: "10" },
       { rank: 2, name: "Rasha Mohamed", joiningDate: "02/01/2023", daysCount: "1", referrals: "8" },
     ],
     'Last 7 Days': [
@@ -29,15 +29,16 @@ function ReferralContestPage() {
   };
 
   return (
-    <>
-      <h2 className='titel-refelr'>
-        Total subscribers <span style={{ backgroundColor: '#d3a15a', borderRadius: '10px', color: 'white', padding: '2px 8px' }}>114</span>
+    <div className="referral-page">
+      
+     
+      <h2 className="title-referral">
+        Total subscribers <span className="subscriber-count">114</span>
       </h2>
-      <img src={photo} alt='Referral' className="referral-image" />
-
+      <img src={photo} alt="Referral" className="referral-image" />
+     
       <div className="referral-contest">
-        <h3>Referral Contest</h3>
-        <p>Get financial rewards when you encourage your friends to join EFMhub through your referral link.</p>
+        <p className="contest-description">Get financial rewards when you encourage your friends to join EFMhub through your referral link.</p>
         
         <div className="time-filters">
           {Object.keys(data).map((tab) => (
@@ -62,7 +63,7 @@ function ReferralContestPage() {
 
           {data[activeTab].map((item) => (
             <div key={item.rank} className="table-row">
-              <span className="rank">{item.rank}</span>
+              <span className="rank"><img src={trophy} alt=''/>{item.rank}</span>
               <span className="name">{item.name}</span>
               <span className="joining-date">{item.joiningDate}</span>
               <span className="days-count">{item.daysCount}</span>
@@ -71,7 +72,7 @@ function ReferralContestPage() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

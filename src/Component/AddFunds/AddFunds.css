@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .copy-addfunds{
+    text-align: center;
+    margin-left: 406px;
+    width: 291px;
+  }
+  .container-add-funds {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .title-add-funds {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  
+  .subtitle-add-funds {
+    font-size: 1.2em;
+    color: #999;
+    margin: 10px 0;
+  }
+  
+  .contact-add-funds {
+    font-size: 1.1em;
+    color: #d3a15a;
+  }
+  
+  .icon-add-funds {
+    width: 15px;
+    vertical-align: middle;
+  }
+  
+  .card-add-funds {
+    background-color: #fff;
+    border-radius: 22px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 400px;
+    margin-left: 362px
+  }
+  
+  .total-label-add-funds {
+    font-size: 1.3em;
+    color: #d3a15a;
+margin-right: 500px; 
+font-weight: bold;
+ }
+ .header-info-add-funds {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 371px;
+    font-weight: bold;
+    font-size: 19px
+  }
+  
+  .subtitle-add-funds {
+    font-size: 1.2em;
+    color: #999;
+    margin: 0;
+  }
+  
+  .contact-add-funds {
+    font-size: 1em;
+    color: #d3a15a;
+    display: flex;
+    align-items: center;
+    margin-right: -204px;
+  }
+  
+  .icon-add-funds {
+    width: 31px;
+    height: 15px;
+    margin-right: -133px;
+    vertical-align: middle;
+  }
+  
+  
+  .total-amount-add-funds {
+    font-size: 1.8em;
+    color: #333;
+    margin-left: -257px;
+    font-weight: bold;
+  }
+  .total-container-add-funds {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  form label {
+    display: block;
+    font-size: 0.9em;
+    color: #EAD7BC;
+    text-align: left;
+    margin-top: 15px;
+  }
+  
+  form input[type="text"],
+  form select,
+  form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+  }
+  
+  .fees-add-funds {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .fees-add-funds div {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .buttons-add-funds {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .send-btn-add-funds {
+    flex: 1;
+    padding: 10px;
+    background-color: #d3a15a;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .cancel-btn-add-funds {
+    flex: 1;
+    padding: 10px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 8px;
+    color: #333;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .footer-logos-add-funds {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .footer-logos-add-funds img {
+    width: 50px;
+    height: auto;
+  }
+  
+  footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #999;
+  }
+  

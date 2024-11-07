@@ -43,7 +43,6 @@ const Payment = () => {
     </p>
     <div className="payment-section">
         <h3>We accept payments via!</h3>
-        <div className="section-divider"></div>
         <div className="payment-logos">
             <img src={orange} alt="Orange Money" />
             <img src={we} alt="We Pay" />

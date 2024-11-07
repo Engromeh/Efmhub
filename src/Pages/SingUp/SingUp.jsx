@@ -77,7 +77,7 @@ const SingUp = () => {
 
 
           <li><a href="#">Home</a></li>
-          <li><a href="#">AboutUs</a></li>
+          <li><a href="#">Aboutus</a></li>
           <li><a href="#">Pricing</a></li>
         </ul>
       </nav>

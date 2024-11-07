@@ -24,7 +24,6 @@ const Footer = () => {
               choice for everyone.
             </p>
             <br />
-            <p>Copyright Satyam Studio</p>
           </div>
           <div className="footer-links">
             <div className="footer-column">

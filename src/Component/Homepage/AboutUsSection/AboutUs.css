@@ -12,31 +12,32 @@
     font-size: 1.2em;
     color: #333;
 }
+
 .section-dividerse {
-    width: 80%; 
+    width: 80%;
     max-width: 300px;
-    height: 2px; 
-    background-color: #d3a15a; 
-    margin: 20px auto; 
+    height: 2px;
+    background-color: #d3a15a;
+    margin: 20px auto;
     border-radius: 1px;
-    opacity: 0.8; 
-  }
-  
-  @media (max-width: 768px) {
-    .section-divider {
-      width: 90%; 
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .section-dividerse {
+        width: 90%; 
     }
-  }
-  
+}
+
 .about-section-icon-text {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 1em;
-    border: 1px solid #DFBC8A; ;
+    border: 1px solid #DFBC8A;
     padding: 10px;
     border-radius: 10px;
-    color:#DFBC8A;
+    color: #DFBC8A;
     width: 365px;
     margin-bottom: -40px;
 }
@@ -68,10 +69,10 @@
     width: 279px;
     height: 124px;
 }
-.loggo33{
+
+.loggo33 {
     width: 125px;
 }
-
 
 .efm-hub-container {
     display: flex;
@@ -79,25 +80,23 @@
     justify-content: center;
     width: 246px;
     height: 81px;
-    border: 1px solid #DFBC8A; /* لون ذهبي فاتح */
+    border: 1px solid #DFBC8A;
     border-radius: 12px;
     padding: 10px 20px;
     text-align: center;
     margin-right: 50px;
-  }
-  
-  .efm-logo {
-    width: 60px; 
+}
+
+.efm-logo {
+    width: 60px;
     margin-right: 10px;
-  }
-  
-  .efm-text {
+}
+
+.efm-text {
     font-size: 24px;
-    color: #b3b3b3; 
+    color: #b3b3b3;
     font-weight: bold;
-  }
-  
-  
+}
 
 .about-section-right-column {
     flex: 2;
@@ -137,19 +136,33 @@
 
     .about-section-goals-vision {
         flex-direction: column;
+        gap: 20px; /* تقليل المسافة بين العناصر في الشاشات الصغيرة */
     }
 
     .about-section-right-column {
         padding-left: 0;
+        padding-right: 0;
     }
 
     .about-section-icon-text {
         justify-content: center;
         text-align: center;
-        margin-left: -30px;
+        width: 90%; /* ضبط العرض للشاشات الصغيرة */
+        margin: 0 auto;
     }
 
     .about-section-goal-card, .about-section-vision-card {
         margin-bottom: 15px;
+        width: 100%; /* اجعل العرض 100% في الشاشات الصغيرة */
+    }
+
+    .efm-hub-container {
+        width: 90%; /* توسيط الحاوية وتكبير العرض ليكون مناسبًا */
+        margin: 20px auto;
+    }
+
+    .about-section-logo-section {
+        width: 90%; /* ضبط العرض ليتناسب مع الشاشة */
+        margin: 0 auto;
     }
 }

@@ -70,6 +70,7 @@ const Aboutus = () => {
               companies on advertising profits...
             </p>
           </div>
+          <img src={icon} alt="icon" className="about-section-icon" />
           <div className="about-section-vision-card">
             <h3>◎ Our vision</h3>
             <p>

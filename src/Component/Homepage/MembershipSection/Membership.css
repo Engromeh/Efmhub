@@ -49,7 +49,7 @@
 
 .center-card {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 64px;
     border-radius: 15px;
     border: 1px solid #f0e1c8;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -109,6 +109,9 @@
 .benefit-card p, .center-card p {
     color: #555;
     line-height: 1.5;
+}
+.benefit-card .last-card{
+    margin-top: 2px;
 }
 
 /* استعلامات الوسائط للهاتف */

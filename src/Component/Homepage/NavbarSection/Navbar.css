@@ -3,41 +3,42 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 15px; /* تقليل التباعد */
+  padding: 5px 15px;
   background-color: #f9f9f9;
   border-bottom: 1px solid #ddd;
-  position: fixed; /* تثبيت الـ Navbar في أعلى الصفحة */
-  top: 0; /* تثبيته في الأعلى */
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* لضمان ظهوره فوق العناصر الأخرى */
+  z-index: 1000;
 }
 
 /* تعويض المساحة التي يشغلها الـ Navbar */
 .navbar-spacer {
-  height: 50px; /* يجب ضبط هذا الارتفاع ليطابق ارتفاع الـ Navbar */
+  height: 50px;
 }
 
 /* تنسيق الشعار */
 .logoss {
-  max-width: 50px; /* حجم أصغر للشعار */
+  max-width: 50px;
   height: auto;
 }
 
 /* تنسيق زر الـ hamburger */
 .hamburger {
   display: none;
-  font-size: 1.2em; /* تصغير حجم زر الـ hamburger */
+  font-size: 1.5em;
   background: none;
   border: none;
   cursor: pointer;
   color: #333;
+  margin-left: auto;
 }
 
 /* تنسيق القائمة */
 .nav {
   display: flex;
-  gap: 15px; /* تقليل المسافة بين العناصر */
+  gap: 15px;
   flex: 1;
   justify-content: center;
 }
@@ -45,7 +46,7 @@
 .nav ul {
   display: flex;
   list-style: none;
-  gap: 75px; /* تقليل المسافة بين الروابط */
+  gap: 75px;
   padding: 0;
   margin: 0;
 }
@@ -53,63 +54,107 @@
 .nav ul li a {
   text-decoration: none;
   color: #333;
-  font-size: 0.9em; /* تصغير حجم النص */
+  font-size: 0.9em;
   font-weight: bold;
 }
 
 /* تنسيق أزرار التسجيل وتسجيل الدخول */
 .auth-buttons {
   display: flex;
-  gap: 8px; /* تقليل التباعد بين الأزرار */
+  gap: 8px;
+  align-items: center;
 }
 
 .auth-buttons button {
   background-color: #333;
   color: white;
-  padding: 5px 10px; /* تقليل حجم الأزرار */
-  font-size: 0.8em; /* تصغير حجم الخط داخل الأزرار */
+  padding: 5px 10px;
+  font-size: 0.8em;
   border: none;
-  border-radius: 15px; /* زوايا أصغر للأزرار */
+  border-radius: 15px;
   cursor: pointer;
 }
 
 /* تصميم التليفون */
 @media (max-width: 768px) {
+  .headerss {
+    padding: 10px 20px;
+  }
+
   .nav {
-    display: none; /* إخفاء القائمة على الشاشات الصغيرة */
+    display: none;
     position: absolute;
     top: 50px;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
     background-color: #f9f9f9;
     flex-direction: column;
     align-items: center;
-    padding: 10px 0;
+    padding: 15px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-top: 1px solid #ddd;
+    border-radius: 8px;
+    z-index: 999;
   }
 
   .nav.open {
     display: flex;
-    margin-top: 12px; /* إظهار القائمة عند النقر على زر الـ hamburger */
   }
 
   .nav ul {
-    flex-direction: column; 
-    width: 100%; 
-    gap: 10px; 
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
   }
 
   .nav ul li {
-    width: 100%; /* جعل الروابط تمتد بعرض الشاشة */
-    text-align: center; /* توسيط النص */
+    width: 100%;
+    text-align: center;
   }
 
   .hamburger {
-    display: block; /* إظهار زر الـ hamburger على الشاشات الصغيرة */
+    display: block;
+    font-size: 1.5em;
   }
 
   .auth-buttons {
-    display: none; /* إخفاء الأزرار على الشاشات الصغيرة */
+    display: none;
+  }
+
+  .mobile-auth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .mobile-auth-buttons button {
+    width: 80%;
+    padding: 8px;
+    font-size: 1em;
+    border-radius: 10px;
+  }
+}
+
+/* تحسين العرض على الشاشات الصغيرة جدًا */
+@media (max-width: 480px) {
+  .nav {
+    width: 90%;
+  }
+
+  .nav ul {
+    gap: 5px;
+  }
+
+  .hamburger {
+    font-size: 1.3em;
+  }
+
+  .mobile-auth-buttons button {
+    font-size: 0.9em;
+    padding: 6px 10px;
   }
 }

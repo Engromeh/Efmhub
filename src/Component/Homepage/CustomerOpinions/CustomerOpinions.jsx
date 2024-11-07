@@ -9,7 +9,6 @@ const reviews = [
 const CustomerOpinions = () => {
     return (
         <>
-                <div className="section-divider"></div>
 
         <div className="opinions-section">
             <h2>Customer opinions</h2>
@@ -27,7 +26,6 @@ const CustomerOpinions = () => {
                 ))}
             </div>
         </div>
-        <div className="section-divider"></div>
 
         </>
     );

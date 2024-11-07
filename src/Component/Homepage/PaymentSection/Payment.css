@@ -23,12 +23,10 @@
 }
 
 .offer-card {
-  background-color: #f9f9f9;
   width: 100%;
   max-width: 350px;
   padding: 15px;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   text-align: left;
@@ -41,8 +39,8 @@
   font-weight: bold;
   padding: 10px;
   border-radius: 10px;
-  width: 50px;
-  height: 50px;
+  width: 228px;
+  height: 82px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,21 +87,8 @@
     margin-top: 36px;
 }
 
-.section-divider {
-  width: 80%; 
-  max-width: 300px;
-  height: 2px; 
-  background-color: #d3a15a; 
-  margin: 20px auto; 
-  border-radius: 1px;
-  opacity: 0.8; 
-}
 
-@media (max-width: 768px) {
-  .section-divider {
-    width: 90%; 
-  }
-}
+ 
 
 
 /* تحسين التنسيق لشاشات الهواتف */

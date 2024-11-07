@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
 .welcome-section {
     display: flex;
     flex-direction: column;
@@ -11,15 +12,15 @@
 }
 
 .welcome-section h1 {
-    font-size: 2em;
+    font-size: 50px;
     color: #000000;
     margin-top: 10px;
 }
 
 .welcome-section .highlight {
     color: #DFBC8A; 
-    
 }
+
 .highlight img {
     position: absolute;
     bottom: -2px;
@@ -42,7 +43,6 @@
     padding: 20px 0;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    
 }
 
 .stat-item {
@@ -50,9 +50,9 @@
 }
 
 .stat-item .number {
-    font-size: 2,5em;
     font-weight: bold;
     color: #000;
+    font-size: 33px;
 }
 
 .stat-item .label {
@@ -71,9 +71,9 @@
 
 .welcome-text {
     font-family: "Cairo", serif;
-    font-size:64px; /* تكبير الخط الأساسي */
+    font-size: 64px;
     font-weight: 600;
-    color: #000; /* لون النص الأساسي */
+    color: #000;
 }
 
 .highlight {
@@ -83,8 +83,6 @@
     padding-bottom: 5px;
 }
 
-
-
 .statistics-section {
     display: flex;
     flex-direction: row; 
@@ -92,47 +90,41 @@
     padding: 20px 0;
 }
 
-
+/* تحسينات للشاشات الصغيرة */
 @media (max-width: 600px) { 
     .statistics-section {
         flex-direction: column;
-        gap: 52px; 
+        gap: 30px; /* تصغير الفجوة بين العناصر */
+        align-items: center; /* توسيط العناصر في العمود */
     }
 
     .stat-item .number {
-        font-size: 1.2em; 
-        text-align: center; 
+        font-size: 1.5em; /* تكبير الرقم لتتناسب مع الشاشات الصغيرة */
     }
 
     .stat-item .label {
-        font-size: 1em; 
-        text-align: center; 
+        font-size: 1em;
+        text-align: center;
+        margin-left: 0; /* إزالة الهامش على الشاشات الصغيرة */
     }
 
     .welcome-section h1 {
-        font-size: 1.3em; 
-        text-align: center; 
+        font-size: 1.5em; /* تصغير حجم العنوان */
+        text-align: center;
     }
 
     .welcome-image {
-        max-width: 80%; 
-        margin: 0 auto; 
-    }
-
-    .social-icons {
-        flex-direction: row; /* تنظيم الأيقونات في صف */
-        gap: 10px; 
-        justify-content: center; 
+        max-width: 80%;
+        margin: 20px auto; /* توسيط الصورة */
     }
 
     .section-divider-Hero {
-        width: 100%; 
-        margin: 10px 0; 
+        width: 90%; /* جعل العرض مناسب للشاشات الصغيرة */
+        margin: 10px auto;
     }
 
-    .footer-bottom {
-        flex-direction: column; 
+    .welcome-text {
+        font-size: 2em; /* تقليل حجم النص */
         text-align: center;
-        gap: 10px; 
     }
 }
