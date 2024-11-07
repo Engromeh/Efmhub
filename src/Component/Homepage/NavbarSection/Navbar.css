@@ -1,0 +1,114 @@
+/* تنسيق الحاوية الرئيسية للـ Navbar */
+.headerss {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px; /* تقليل التباعد */
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  position: fixed; /* تثبيت الـ Navbar في أعلى الصفحة */
+  top: 0; /* تثبيته في الأعلى */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* لضمان ظهوره فوق العناصر الأخرى */
+}
+
+/* تعويض المساحة التي يشغلها الـ Navbar */
+.navbar-spacer {
+  height: 50px; /* يجب ضبط هذا الارتفاع ليطابق ارتفاع الـ Navbar */
+}
+
+/* تنسيق الشعار */
+.logoss {
+  max-width: 50px; /* حجم أصغر للشعار */
+  height: auto;
+}
+
+/* تنسيق زر الـ hamburger */
+.hamburger {
+  display: none;
+  font-size: 1.2em; /* تصغير حجم زر الـ hamburger */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* تنسيق القائمة */
+.nav {
+  display: flex;
+  gap: 15px; /* تقليل المسافة بين العناصر */
+  flex: 1;
+  justify-content: center;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 75px; /* تقليل المسافة بين الروابط */
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9em; /* تصغير حجم النص */
+  font-weight: bold;
+}
+
+/* تنسيق أزرار التسجيل وتسجيل الدخول */
+.auth-buttons {
+  display: flex;
+  gap: 8px; /* تقليل التباعد بين الأزرار */
+}
+
+.auth-buttons button {
+  background-color: #333;
+  color: white;
+  padding: 5px 10px; /* تقليل حجم الأزرار */
+  font-size: 0.8em; /* تصغير حجم الخط داخل الأزرار */
+  border: none;
+  border-radius: 15px; /* زوايا أصغر للأزرار */
+  cursor: pointer;
+}
+
+/* تصميم التليفون */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* إخفاء القائمة على الشاشات الصغيرة */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: #f9f9f9;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #ddd;
+  }
+
+  .nav.open {
+    display: flex; /* إظهار القائمة عند النقر على زر الـ hamburger */
+  }
+
+  .nav ul {
+    flex-direction: column; 
+    width: 100%; 
+    gap: 10px; 
+  }
+
+  .nav ul li {
+    width: 100%; /* جعل الروابط تمتد بعرض الشاشة */
+    text-align: center; /* توسيط النص */
+  }
+
+  .hamburger {
+    display: block; /* إظهار زر الـ hamburger على الشاشات الصغيرة */
+  }
+
+  .auth-buttons {
+    display: none; /* إخفاء الأزرار على الشاشات الصغيرة */
+  }
+}
