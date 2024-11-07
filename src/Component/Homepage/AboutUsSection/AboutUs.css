@@ -33,7 +33,7 @@
     align-items: center;
     gap: 10px;
     font-size: 1em;
-    background-color: #f9f9f9;
+    border: 1px solid #DFBC8A; ;
     padding: 10px;
     border-radius: 10px;
     color:#DFBC8A;
