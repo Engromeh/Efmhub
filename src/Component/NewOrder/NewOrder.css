@@ -1,0 +1,145 @@
+.new-order-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+}
+
+.new-order-title {
+    font-size: 24px;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    text-align: center; /* توسيط العنوان */
+}
+
+.price-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.price-label {
+    font-size: 1.2em;
+    color: #EAD7BC;
+    font-weight: bold;
+}
+
+.price-value {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+.order-label {
+    display: block;
+    margin-top: 15px;
+    color: #EAD7BC;
+    text-align: left;
+}
+
+.order-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.time-inputs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* يسمح للكروت بالانتقال إلى سطر جديد في الشاشات الصغيرة */
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.upgrade-button {
+    background-color: #EAD7BC;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 45%;
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 45%;
+}
+
+.upgrade-button:hover {
+    background-color: #d9c3a3;
+}
+
+.cancel-button:hover {
+    background-color: #b0b0b0;
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .new-order-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .price-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .upgrade-button, .cancel-button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .time-inputs {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* تحسينات للشاشات الأصغر (الهواتف) */
+@media (max-width: 480px) {
+    .new-order-title {
+        font-size: 20px;
+    }
+
+    .price-value {
+        font-size: 1.2em;
+    }
+
+    .order-label {
+        font-size: 0.9em;
+    }
+
+    .order-input {
+        padding: 8px;
+    }
+
+    .upgrade-button, .cancel-button {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
