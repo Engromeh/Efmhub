@@ -6,6 +6,10 @@ const Hero = () => {
     <section>
      <div className="welcome-section ">
     <h1 className='welcome-text'>Welcome to <span className="highlight relative">EFM  <img src={emLogo} alt="" className='absolute'/></span> hub</h1>
+    <div className="about-section-icon-text sm:m-auto lg:m-0">
+            <span className="about-section-icon">🚀</span>{" "}
+            <p className='hero-section-p'>Designed to Lead and Built to Last</p>
+          </div>
     <img src={photo2} alt="Welcome Image" className="welcome-image" />
 </div>
 

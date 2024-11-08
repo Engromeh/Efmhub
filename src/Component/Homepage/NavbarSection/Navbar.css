@@ -54,11 +54,16 @@
 .nav ul li a {
   text-decoration: none;
   color: #333;
-  font-size: 0.9em;
+  font-size: 1.2em;
   font-weight: bold;
 }
+.nav ul li :hover {
+  background-color: #DFBC8A; /* لون الخلفية عند تمرير الماوس */
+  color: rgb(0, 0, 0); /* لون النص عند تمرير الماوس */
+  border-radius: 8px; /* جعل الحواف مستديرة */
+  padding: 10px 15px; /* حواف داخلية */
+}
 
-/* تنسيق أزرار التسجيل وتسجيل الدخول */
 .auth-buttons {
   display: flex;
   gap: 8px;
@@ -75,7 +80,6 @@
   cursor: pointer;
 }
 
-/* تصميم التليفون */
 @media (max-width: 768px) {
   .headerss {
     padding: 10px 20px;

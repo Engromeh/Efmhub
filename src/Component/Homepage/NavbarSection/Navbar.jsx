@@ -18,19 +18,19 @@ const Navbar = () => {
       <nav className={`nav ${isOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a href="/home">Home</a>
           </li>
           <li>
-            <a href="#about">About Us</a>
+            <a href="/Aboutus">About Us</a>
           </li>
           <li>
             <a href="/ReferralContestPage">Referral Contest</a>
           </li>
           <li>
-            <a href="#membership">Membership</a>
+            <a href="/Membershib">Membership</a>
           </li>
           <li>
-            <a href="#pricing">Pricing</a>
+            <a href="/offers">offers</a>
           </li>
         </ul>
       </nav>

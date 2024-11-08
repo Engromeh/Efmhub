@@ -225,7 +225,7 @@ const DashBoardLayout = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/addfunds"
                 className="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-[#DFBC8A] dark:hover:bg-gray-700 group"
               >
                 <svg

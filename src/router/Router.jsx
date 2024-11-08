@@ -11,7 +11,9 @@ import Login from "../Pages/Login/Login";
 import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
 import SingUp from "../Pages/SingUp/SingUp";
 import DashBoardLayout from "../Layout/DashBoardLayout";
-
+import Aboutus from "../Component/Homepage/AboutUsSection/AboutUs";
+import Membership from "../Component/Homepage/MembershipSection/Membership";
+import Payment from "../Component/Homepage/PaymentSection/Payment";
 
 const Router =createBrowserRouter(
 
@@ -19,7 +21,11 @@ const Router =createBrowserRouter(
       <>
 <Route  path='/' element={<Layout/>} >
 <Route index element={<Homepage/>} />
-<Route path="/ReferralContestPage" element={<ReferralContestPage/>} />
+<Route path="/Aboutus" element={<Aboutus />} />
+<Route path="/Membershib" element={<Membership />} />
+<Route path="/offers" element={<Payment />} />
+<Route path="/home" element={<Homepage/>} />
+
 </Route>
 <Route path='/Login' element={<Login/>} />
 <Route path="/ForgetPassword" element={<ForgetPassword/>} />

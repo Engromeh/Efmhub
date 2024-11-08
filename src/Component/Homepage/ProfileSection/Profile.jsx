@@ -14,7 +14,7 @@ const Profile = () => {
 </div>
       <div className="profile-content">
         <h2>Eng/ Abdulrahman AlSemri</h2>
-        <h3>Founder & Owner EFM</h3>
+        <h3>EFM & Founder and Owner </h3>
         <p>
           He holds a Bachelor's degree in Software Engineering and Computer Science from the UK, and certified credentials such as Data Analysis, PMP, DA, and ML.
           He is the founder of EFM Company and also the owner of ENG MONEY Company. Engineer Abdulrahman is considered an ambitious person who believes that everyone can achieve financial success, and he works hard to achieve this goal.
