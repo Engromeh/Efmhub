@@ -1,0 +1,186 @@
+.withdraw-container {
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+  }
+  
+  /* الشعار والزر العلوي */
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .header-logo {
+    max-width: 100px;
+  }
+  
+  .add-withdraw-button {
+    background-color: #EAD7BC;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  
+  /* نموذج السحب */
+  .withdraw-form-container {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-title {
+    font-size: 1.5em;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    text-align: left;
+    margin-bottom: 5px;
+    color: #EAD7BC;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .input-with-unit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .input-unit {
+    margin-left: 10px;
+    color: #EAD7BC;
+  }
+  
+  .buttons-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .upgrade-button {
+    flex: 1;
+    background-color: #EAD7BC;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .cancel-button {
+    flex: 1;
+    background-color: #ccc;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .payment-logos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .payment-logos img {
+    width: 40px;
+  }
+  
+  /* المودال */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .modal-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* تحسينات الريسبونسف */
+  @media (max-width: 768px) {
+    .withdraw-container {
+      max-width: 90%;
+      padding: 20px;
+    }
+  
+    .header-section {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+  
+    .header-logo {
+      margin-left: 0;
+    }
+  
+    .add-withdraw-button {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .buttons-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .upgrade-button, .cancel-button {
+      width: 100%;
+    }
+  
+    .modal-content {
+      width: 90%;
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .input-with-unit {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .input-unit {
+      margin-left: 0;
+      margin-top: 5px;
+    }
+  
+    .form-title {
+      font-size: 1.2em;
+    }
+  }
+  
