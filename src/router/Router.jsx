@@ -14,6 +14,7 @@ import DashBoardLayout from "../Layout/DashBoardLayout";
 import Aboutus from "../Component/Homepage/AboutUsSection/AboutUs";
 import Membership from "../Component/Homepage/MembershipSection/Membership";
 import Payment from "../Component/Homepage/PaymentSection/Payment";
+import Faq from "../Component/Homepage/Faq/Faq";
 
 const Router =createBrowserRouter(
 
@@ -21,11 +22,11 @@ const Router =createBrowserRouter(
       <>
 <Route  path='/' element={<Layout/>} >
 <Route index element={<Homepage/>} />
-<Route path="/Aboutus" element={<Aboutus />} />
+<Route path="#Aboutus" element={<Aboutus />} />
 <Route path="/Membershib" element={<Membership />} />
 <Route path="/offers" element={<Payment />} />
 <Route path="/home" element={<Homepage/>} />
-
+<Route path="/Faq" element={<Faq />} />
 </Route>
 <Route path='/Login' element={<Login/>} />
 <Route path="/ForgetPassword" element={<ForgetPassword/>} />

@@ -31,7 +31,11 @@ const Navbar = () => {
           </li>
           <li>
             <a href="/offers">offers</a>
+            </li>
+            <li>
+            <a href="/Faq">Faq</a>
           </li>
+         
         </ul>
       </nav>
       <div className="auth-buttons">
