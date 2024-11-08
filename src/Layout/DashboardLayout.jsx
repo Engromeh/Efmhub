@@ -1,6 +1,9 @@
-import logo from "../../photo/dashpord.svg"
-import themeIcon from "../../photo/Frame 9.png"
-import mailIcon from "../../photo/mail.png"
+import logo from "../../photo/dashpord.svg";
+import themeIcon from "../../photo/Frame 9.png";
+import mailIcon from "../../photo/mail.png";
+import iconname from "../../photo/Icon.png";
+import photo from "../../photo/photo_2024-11-06_17-06-38-removebg-preview 1.png";
+
 const DashBoardLayout = () => {
   return (
     <>
@@ -36,15 +39,16 @@ const DashBoardLayout = () => {
                   className="w-[61px] h-[59px]"
                   alt="FlowBite Logo"
                 />
-               
               </a>
-              <p className="ml-32 text-2xl text-[#77808B]">Dashboard User EFM</p>
+              <p className="ml-32 text-2xl text-[#77808B]">
+                Dashboard User EFM
+              </p>
             </div>
-            
+
             <div className="flex items-center">
               <div className="flex items-center ms-3">
-                <img src={themeIcon} alt="" className="mr-4"/>
-                <img src={mailIcon} alt="" className="mr-4"/>
+                <img src={themeIcon} alt="" className="mr-4" />
+                <img src={mailIcon} alt="" className="mr-4" />
                 <div>
                   <button
                     type="button"
@@ -65,10 +69,7 @@ const DashBoardLayout = () => {
                   id="dropdown-user"
                 >
                   <div className="px-4 py-3" role="none">
-                    <p
-                      className="text-sm text-gray-900 "
-                      role="none"
-                    >
+                    <p className="text-sm text-gray-900 " role="none">
                       Neil Sims
                     </p>
                     <p
@@ -268,11 +269,29 @@ const DashBoardLayout = () => {
         </div>
       </aside>
 
-      <div className="p-4 sm:ml-64  pt-20">
-       <div className="h-96 bg-[#f8f8f8] rounded-2xl mt-2"></div>
+      <div className="p-4 sm:ml-64  pt-20 h-screen relative">
+        <div className=" bg-[#f8f8f8] rounded-2xl mt-2 p-2">
+          <div className=" block lg:flex justify-between">
+            <p className="flex text-2xl text-[#77808B] items-center sm:justify-center">
+              <img src={iconname} className="w-[20px] h-[20px] mr-1" alt="" />
+              <span> Hedra Naguib</span>
+            </p>
+            <div className="flex  text-[#77808B] items-center justify-between">
+              <span className="mr-1"> Your Membership</span>
+              <button className="bg-[#DFBC8A] p-2 rounded-md text-white text-xs">
+                Not Upgraded
+              </button>
+            </div>
+          </div>
+         
+        </div>
+        <img
+          className="absolute bottom-0 right-0 w-80 h-80"
+          src={photo}
+          alt=""
+        />
       </div>
     </>
-
   );
 };
 

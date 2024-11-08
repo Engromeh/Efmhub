@@ -1,10 +1,10 @@
 import './AddFunds.css';
-import copy from '../../../photo/Vector.svg';
- import etselit from '../../../photo/etsalit.svg'; 
-import vodefon from '../../../photo/vodefone.svg';
-import bank from '../../../photo/banx.svg';
+import copy from '../../../../photo/Vector.svg';
+ import etselit from '../../../../photo/etsalit.svg'; 
+import vodefon from '../../../../photo/vodefone.svg';
+import bank from '../../../../photo/banx.svg';
 // import we from '../../../../photo/wepay.svg'
-import instpay from '../../../photo/انستباي.svg'
+import instpay from '../../../../photo/انستباي.svg'
 
 const AddFunds = () => {
   return (
