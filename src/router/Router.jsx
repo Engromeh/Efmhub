@@ -27,6 +27,8 @@ const Router =createBrowserRouter(
 <Route path="/offers" element={<Payment />} />
 <Route path="/home" element={<Homepage/>} />
 <Route path="/Faq" element={<Faq />} />
+
+<Route path="/ReferralContestPage" element={<ReferralContestPage/>} />
 </Route>
 <Route path='/Login' element={<Login/>} />
 <Route path="/ForgetPassword" element={<ForgetPassword/>} />
