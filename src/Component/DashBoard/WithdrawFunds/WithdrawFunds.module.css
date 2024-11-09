@@ -1,0 +1,205 @@
+.withdrawContainer {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Cairo', sans-serif;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* الشعار والزر العلوي */
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.headerLogo {
+  max-width: 80px;
+}
+
+.addWithdrawButton {
+  background-color: #EAD7BC;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: auto;
+}
+
+/* نموذج السحب */
+.withdrawFormContainer {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.formTitle {
+  font-size: 1.5em;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+}
+
+.formLabel {
+  text-align: left;
+  margin-bottom: 5px;
+  color: #EAD7BC;
+}
+
+.formInput {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.inputWithUnit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.inputUnit {
+  margin-left: 10px;
+  color: #EAD7BC;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.upgradeButton {
+  flex: 1;
+  background-color: #EAD7BC;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cancelButton {
+  flex: 1;
+  background-color: #ccc;
+  color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.paymentLogos {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.paymentLogos img {
+  width: 30px;
+}
+
+/* المودال */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.modalInput {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* تحسينات الريسبونسف */
+@media (max-width: 768px) {
+  .withdrawContainer {
+    padding: 15px;
+  }
+
+  .headerSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .addWithdrawButton {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .buttonsContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .upgradeButton, .cancelButton {
+    width: 100%;
+  }
+
+  .paymentLogos {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .withdrawFormContainer {
+    padding: 15px;
+  }
+
+  .inputWithUnit {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .inputUnit {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .formTitle {
+    font-size: 1.3em;
+  }
+
+  .modalContent {
+    padding: 20px;
+  }
+
+  .buttonsContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .upgradeButton, .cancelButton {
+    width: 100%;
+  }
+
+  .addWithdrawButton {
+    font-size: 0.9em;
+  }
+}

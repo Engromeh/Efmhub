@@ -1,0 +1,189 @@
+/* حاوية المهام */
+.tasksContainer {
+  max-width: 100%;
+  width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* عنوان */
+.tasksTitle {
+  font-size: 1.8rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* فلترة الأزرار */
+.tasksFilterButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.tasksButton {
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #ddd;
+  color: #666;
+  transition: background-color 0.3s ease;
+}
+
+.tasksButtonActive {
+  background-color: #f1c27d;
+  color: white;
+}
+
+.addButton {
+  background-color: gold;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #e6b800;
+}
+
+/* بطاقة المهمة */
+.tasksCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  gap: 20px;
+}
+
+/* صورة المهمة */
+.tasksImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* تفاصيل المهمة */
+.tasksDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tasksDetails h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+}
+
+.tasksDetails p {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.tasksDetails span {
+  color: #f1c27d;
+  font-weight: bold;
+}
+
+/* أزرار الإجراءات */
+.tasksButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.tasksViewTask {
+  background-color: #f1c27d;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.tasksViewTask:hover {
+  background-color: #e0b378;
+}
+
+.tasksCancelled {
+  background-color: #ddd;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* تحسين العرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .tasksCard {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .tasksImage {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-left: 192px
+  }
+
+  .tasksDetails {
+    width: 100%;
+    margin-left: 182px
+  }
+
+  .tasksButtons {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tasksButton,
+  .addButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tasksCard {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    width: 764px
+  }
+
+  .tasksDetails h3 {
+    font-size: 1rem;
+  }
+
+  .tasksViewTask,
+  .tasksCancelled {
+    width: 134px;
+    text-align: center;
+    margin-left: 101px;
+  }
+}

@@ -1,41 +1,40 @@
-import React from 'react';
-import './Current.css';
+import curentstyles from './Current.module.css';
 
 const Current = () => {
   return (
-    <div className="Current-container">
-      <div className="Current-header">
+    <div className={curentstyles.currentContainer}>
+      <div className={curentstyles.currentHeader}>
         <h2>Upgrade Account</h2>
-        <img src="/logo.png" alt="EFM Logo" className="Current-logo" />
+        <img src="/logo.png" alt="EFM Logo" className={curentstyles.currentLogo} />
       </div>
 
-      <div className="Current-balance-section">
-        <p className="Current-balance-label">CurrentBalance</p>
-        <p className="Current-balance-amount">$155,339 EGP</p>
+      <div className={curentstyles.currentBalanceSection}>
+        <p className={curentstyles.currentBalanceLabel}>Current Balance</p>
+        <p className={curentstyles.currentBalanceAmount}>$155,339 EGP</p>
       </div>
 
-      <div className="Current-section">
+      <div className={curentstyles.currentSection}>
         <h3>Select Payment</h3>
-        <div className="Current-payment-option">
-          <i className="icon">💳</i>
+        <div className={curentstyles.currentPaymentOption}>
+          <i className={curentstyles.icon}>💳</i>
           <span>Upgrade Using Balance</span>
         </div>
       </div>
 
-      <div className="Current-section">
+      <div className={curentstyles.currentSection}>
         <h3>Plan</h3>
-        <div className="Current-plan-select">
+        <div className={curentstyles.currentPlanSelect}>
           Premium - 1250 EGP Lifetime
-          <i className="Current-arrow">▼</i>
+          <i className={curentstyles.currentArrow}>▼</i>
         </div>
       </div>
 
-      <div className="Current-buttons">
-        <button className="Current-upgrade-btn">Upgraded</button>
-        <button className="Current-cancel-btn">Cancel</button>
+      <div className={curentstyles.currentButtons}>
+        <button className={curentstyles.currentUpgradeBtn}>Upgrade</button>
+        <button className={curentstyles.currentCancelBtn}>Cancel</button>
       </div>
 
-      <div className="Current-payment-icons">
+      <div className={curentstyles.currentPaymentIcons}>
         <img src="/orange-money.png" alt="Orange Money" />
         <img src="/we-pay.png" alt="We Pay" />
         <img src="/instapay.png" alt="Instapay" />

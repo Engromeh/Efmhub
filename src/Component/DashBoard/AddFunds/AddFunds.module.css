@@ -1,0 +1,149 @@
+/* Reset & Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.containerAddFunds {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  color: #333;
+}
+
+/* Header */
+.headerInfoAddFunds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.subtitleAddFunds {
+  font-size: 1.2em;
+  color: #999;
+}
+
+.contactAddFunds {
+  font-size: 1em;
+  color: #d3a15a;
+  display: flex;
+  align-items: center;
+}
+
+.iconAddFunds {
+  width: 31px;
+  height: 15px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* Card */
+.cardAddFunds {
+  background-color: #fff;
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.totalContainerAddFunds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.totalLabelAddFunds {
+  font-size: 1.3em;
+  color: #d3a15a;
+  font-weight: bold;
+}
+
+.totalAmountAddFunds {
+  font-size: 1.8em;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Form */
+form label {
+  display: block;
+  font-size: 0.9em;
+  color: #EAD7BC;
+  text-align: left;
+  margin-top: 15px;
+}
+
+form input[type="text"],
+form select,
+form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.feesAddFunds {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttonsAddFunds {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.sendBtnAddFunds {
+  flex: 1;
+  padding: 10px;
+  background-color: #d3a15a;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.cancelBtnAddFunds {
+  flex: 1;
+  padding: 10px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 8px;
+  color: #333;
+  cursor: pointer;
+}
+
+.footerLogosAddFunds {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.footerLogosAddFunds img {
+  width: 50px;
+  height: auto;
+}
+
+.copyAddFunds {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8em;
+  color: #999;
+}

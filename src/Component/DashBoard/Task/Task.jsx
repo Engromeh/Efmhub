@@ -1,4 +1,5 @@
-import './Task.css';
+import React from 'react';
+import styles from './Task.module.css';
 
 const tasks = [
   {
@@ -26,16 +27,16 @@ const tasks = [
 
 const Tasks = () => {
   return (
-    <div className="tasks-container">
-      <div className="tasks-filter-buttons">
-      <h2 className='tasks-titel'>Tasks</h2>
-        <button className="tasks-button active">All</button>
-        <button className="tasks-button">Cancelled</button>
+    <div className={styles.tasksContainer}>
+      <h2 className={styles.tasksTitle}>Tasks</h2>
+      <div className={styles.tasksFilterButtons}>
+        <button className={`${styles.tasksButton} ${styles.tasksButtonActive}`}>All</button>
+        <button className={styles.tasksButton}>Cancelled</button>
       </div>
       {tasks.map((task) => (
-        <div className="tasks-card" key={task.id}>
-          <img src="https://via.placeholder.com/100" alt="Task" className="tasks-image" />
-          <div className="tasks-details">
+        <div className={styles.tasksCard} key={task.id}>
+          <img src="https://via.placeholder.com/100" alt="Task" className={styles.tasksImage} />
+          <div className={styles.tasksDetails}>
             <h3>{task.title}</h3>
             <p>
               <span>Commission:</span> {task.commission}
@@ -47,9 +48,9 @@ const Tasks = () => {
               <span>Time:</span> {task.time}
             </p>
           </div>
-          <div className="tasks-buttons">
-            <button className="tasks-view-task">View Task</button>
-            <button className="tasks-cancelled">Cancelled</button>
+          <div className={styles.tasksButtons}>
+            <button className={styles.tasksViewTask}>View Task</button>
+            <button className={styles.tasksCancelled}>Cancelled</button>
           </div>
         </div>
       ))}

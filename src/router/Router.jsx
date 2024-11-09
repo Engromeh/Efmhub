@@ -43,17 +43,18 @@ const Router =createBrowserRouter(
 <Route path="/SingUp" element={<SingUp/>} />
 
 <Route path="/dashboard" element={<DashBoardLayout/>}>
-<Route path='AddFunds' element={<AddFunds/>} /> 
- <Route path="WithdrawFunds" element={<WithdrawFunds/>} />
-<Route path="Current" element={<Current/>} />
-<Route path='NewOrder' element={<NewOrder/>} />
-<Route path="PrivacyPolicy" element={<PrivacyPolicy/>} />
-<Route path="/dashboard/Upgreedaccount" element={<UpgradeAccount/>} />
-<Route path="Historysection" element={<Historysection/>} />
-<Route path="/task" element={<Tasks/>} />
+
 
 
 </Route>
+<Route path='/AddFunds' element={<AddFunds/>} /> 
+ <Route path="/WithdrawFunds" element={<WithdrawFunds/>} />
+<Route path="/Current" element={<Current/>} />
+<Route path='/NewOrder' element={<NewOrder/>} />
+<Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
+<Route path="/Upgreedaccount" element={<UpgradeAccount/>} />
+<Route path="/Historysection" element={<Historysection/>} />
+<Route path="/task" element={<Tasks/>} />
       </>  
     )
 
