@@ -1,0 +1,125 @@
+.Current-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Tajawal', sans-serif;
+    text-align: center;
+  }
+  
+  .Current-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .Current-logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  .Current-balance-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .Current-balance-label {
+    font-size: 1.2rem;
+    color: #888;
+  }
+  
+  .Current-balance-amount {
+    font-size: 2rem;
+    color: #c39c5d;
+    font-weight: bold;
+  }
+  
+  .Current-section {
+    margin-bottom: 20px;
+  }
+  
+  .Current-section h3 {
+    color: #c39c5d;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  
+  .Current-payment-option {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .Current-payment-option i {
+    margin-right: 10px;
+  }
+  
+  .Current-plan-select {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .Current-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .Current-upgrade-btn {
+    background-color: #c39c5d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .Current-cancel-btn {
+    background-color: #d3d3d3;
+    color: #555;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .Current-payment-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  
+  .Current-payment-icons img {
+    width: 40px;
+    height: auto;
+  }
+  
+  @media (max-width: 480px) {
+    .Current-container {
+      max-width: 95%;
+      padding: 20px;
+    }
+  
+    .Current-balance-amount {
+      font-size: 1.5rem;
+    }
+  
+    .Current-buttons button {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  }
+  

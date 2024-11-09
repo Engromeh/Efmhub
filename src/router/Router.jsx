@@ -15,6 +15,14 @@ import Aboutus from "../Component/Homepage/AboutUsSection/AboutUs";
 import Membership from "../Component/Homepage/MembershipSection/Membership";
 import Payment from "../Component/Homepage/PaymentSection/Payment";
 import Faq from "../Component/Homepage/Faq/Faq";
+import Current from "../Component/DashBoard/Current/Current.JSX";
+import Historysection from "../Component/DashBoard/Historysection/Historysection";
+import NewOrder from "../Component/DashBoard/NewOrder/NewOrder";
+import PrivacyPolicy from "../Component/DashBoard/PrivacyPolicy/PrivacyPolicy";
+import UpgradeAccount from "../Component/DashBoard/Upgreedaccount/Upgreedaccount";
+import AddFunds from "../Component/DashBoard/AddFunds/AddFunds";
+import WithdrawFunds from "../Component/DashBoard/WithdrawFunds/WithdrawFunds";
+import Tasks from "../Component/DashBoard/Task/Task";
 
 const Router =createBrowserRouter(
 
@@ -35,6 +43,15 @@ const Router =createBrowserRouter(
 <Route path="/SingUp" element={<SingUp/>} />
 
 <Route path="/dashboard" element={<DashBoardLayout/>}>
+<Route path='AddFunds' element={<AddFunds/>} /> 
+ <Route path="WithdrawFunds" element={<WithdrawFunds/>} />
+<Route path="Current" element={<Current/>} />
+<Route path='NewOrder' element={<NewOrder/>} />
+<Route path="PrivacyPolicy" element={<PrivacyPolicy/>} />
+<Route path="/dashboard/Upgreedaccount" element={<UpgradeAccount/>} />
+<Route path="Historysection" element={<Historysection/>} />
+<Route path="/task" element={<Tasks/>} />
+
 
 </Route>
       </>  
