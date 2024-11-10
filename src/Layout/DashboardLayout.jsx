@@ -8,8 +8,8 @@ const DashBoardLayout = () => {
   const [userPhoto, setUserPhoto] = useState(
     "https://flowbite.com/docs/images/people/profile-picture-5.jpg"
   );
-  const [showPhotoModal, setShowPhotoModal] = useState(false);
-  const [showMessagesModal, setShowMessagesModal] = useState(false);
+  const [showPhotoDropdown, setShowPhotoDropdown] = useState(false);
+  const [showMessagesDropdown, setShowMessagesDropdown] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -60,7 +60,7 @@ const DashBoardLayout = () => {
           <h1 className="text-2xl text-[#77808B] ml-4">Dashboard User EFM</h1>
         </div>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 relative">
           {/* Toggle Theme Button */}
           <button
             onClick={toggleTheme}
@@ -69,23 +69,54 @@ const DashBoardLayout = () => {
             {isDarkMode ? "🌙" : "☀️"}
           </button>
 
-          {/* Messages Button */}
-          <button
-            onClick={() => setShowMessagesModal(true)}
-            className="p-2 rounded-lg bg-gray-200 hover:bg-gray-300"
-            title="فتح الرسائل"
-          >
-            📧
-          </button>
+          {/* Messages Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setShowMessagesDropdown(!showMessagesDropdown)}
+              className="p-2 rounded-lg bg-gray-200 hover:bg-gray-300"
+              title="Open Messages"
+            >
+              📧
+            </button>
+            {showMessagesDropdown && (
+              <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-4">
+                <p>Message 1</p>
+                <p>Message 2</p>
+                <p>Message 3</p>
+                <button
+                  onClick={() => setShowMessagesDropdown(false)}
+                  className="mt-2 bg-gray-200 p-2 rounded w-full"
+                >
+                  Close
+                </button>
+              </div>
+            )}
+          </div>
 
-          {/* User Photo */}
+          {/* User Photo Dropdown */}
           <div className="relative">
             <img
               className="w-8 h-8 rounded-full cursor-pointer"
               src={userPhoto}
               alt="User"
-              onClick={() => setShowPhotoModal(true)}
+              onClick={() => setShowPhotoDropdown(!showPhotoDropdown)}
             />
+            {showPhotoDropdown && (
+              <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-4">
+                <button
+                  className="block w-full text-left p-2 hover:bg-gray-100"
+                  onClick={() => alert("Personal Settings")}
+                >
+                  Personal Settings
+                </button>
+                <button
+                  className="block w-full text-left p-2 hover:bg-gray-100"
+                  onClick={() => alert("Logging out...")}
+                >
+                  Logout
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </nav>
@@ -115,56 +146,29 @@ const DashBoardLayout = () => {
         </div>
       </aside>
 
-      
+      {/* Main Content */}
+      <main
+        className={`pt-24 transition-all duration-300 ${
+          isSidebarOpen ? "ml-64" : "ml-0"
+        }`}
+        style={{ minHeight: "100vh", backgroundColor: "#f8f8f8" }}
+      >
+        <div className="p-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h2 className="text-xl text-[#77808B]">Current Balance</h2>
+              <p className="text-3xl font-bold text-[#DFBC8A]">$155.339 EG</p>
+            </div>
+          </div>
+        </div>
+
         {/* Footer Image */}
         <img
           src={photo}
           className="absolute bottom-4 right-4 w-32 h-32 sm:w-64 sm:h-64"
           alt="Mascot"
         />
-  
-
-      {/* Photo Modal */}
-      {showPhotoModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-center text-2xl mb-4">Profile Picture</h2>
-            <img
-              src={userPhoto}
-              className="w-40 h-40 rounded-full mx-auto mb-4"
-              alt="User"
-            />
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handlePhotoChange}
-              className="block w-full text-sm text-gray-600"
-            />
-            <button
-              onClick={() => setShowPhotoModal(false)}
-              className="mt-4 bg-gray-200 p-2 rounded w-full"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Messages Modal */}
-      {showMessagesModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-center text-2xl mb-4">Messages</h2>
-            <p>Here are your messages!</p>
-            <button
-              onClick={() => setShowMessagesModal(false)}
-              className="mt-4 bg-gray-200 p-2 rounded w-full"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+      </main>
     </>
   );
 };
