@@ -2,18 +2,32 @@ import React, { useState } from "react";
 import logo from "../../photo/dashpord.svg";
 import themeIcon from "../../photo/Frame 9.png";
 import mailIcon from "../../photo/mail.png";
-import iconname from "../../photo/Icon.png";
-import photo from "../../photo/photo_2024-11-06_17-06-38-removebg-preview 1.png";
 
 const DashBoardLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [userPhoto, setUserPhoto] = useState(
+    "https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+  );
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  // Handle photo change in the navbar
+  const handlePhotoChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setUserPhoto(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <>
+      {/* Navbar */}
       <nav
         className={`fixed top-0 ${
           isSidebarOpen ? "left-64" : "left-0"
@@ -43,27 +57,32 @@ const DashBoardLayout = () => {
         <div className="flex items-center space-x-4">
           <img src={themeIcon} alt="Theme" className="w-6 h-6" />
           <img src={mailIcon} alt="Mail" className="w-6 h-6" />
-          <img
-            className="w-8 h-8 rounded-full"
-            src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-            alt="User"
-          />
+
+          {/* User Photo */}
+          <div className="relative">
+            <img
+              className="w-8 h-8 rounded-full cursor-pointer"
+              src={userPhoto}
+              alt="User"
+            />
+            {/* Input to change photo */}
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handlePhotoChange}
+              className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
+              title="Change Profile Picture"
+            />
+          </div>
         </div>
       </nav>
 
+      {/* Sidebar */}
       <aside
         className={`fixed top-0 left-0 z-40 h-full bg-white border-r border-gray-200 transition-transform duration-300 ${
           isSidebarOpen ? "w-64" : "w-0"
         }`}
       >
-        <div
-          className={`flex items-center justify-start p-4 transition-opacity duration-300 ${
-            isSidebarOpen ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <img src={logo} className="w-12 h-12" alt="Logo" />
-        </div>
-
         <div className={`p-4 ${isSidebarOpen ? "block" : "hidden"}`}>
           <ul className="space-y-4">
             <li className="bg-[#DFBC8A] p-2 rounded-lg text-white">Dashboard</li>
@@ -78,6 +97,7 @@ const DashBoardLayout = () => {
         </div>
       </aside>
 
+      {/* Main Content */}
       <main
         className={`pt-24 transition-all duration-300 ${
           isSidebarOpen ? "ml-64" : "ml-0"
@@ -90,7 +110,6 @@ const DashBoardLayout = () => {
               <h2 className="text-xl text-[#77808B]">Current Balance</h2>
               <p className="text-3xl font-bold text-[#DFBC8A]">$155.339 EG</p>
             </div>
-
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h2 className="text-xl text-[#77808B]">Advertiser Stats</h2>
               <ul className="space-y-2 mt-4">
@@ -99,7 +118,6 @@ const DashBoardLayout = () => {
                 <li>Banner Credits: 0</li>
               </ul>
             </div>
-
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h2 className="text-xl text-[#77808B]">Referral Stats</h2>
               <p>Direct Referrals: 0</p>
@@ -107,12 +125,6 @@ const DashBoardLayout = () => {
             </div>
           </div>
         </div>
-
-        <img
-          src={photo}
-          className="absolute bottom-4 right-4 w-32 h-32 sm:w-64 sm:h-64"
-          alt="Mascot"
-        />
       </main>
     </>
   );
