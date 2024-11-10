@@ -65,7 +65,6 @@ const DashBoardLayout = () => {
               src={userPhoto}
               alt="User"
             />
-            {/* Input to change photo */}
             <input
               type="file"
               accept="image/*"
@@ -83,6 +82,13 @@ const DashBoardLayout = () => {
           isSidebarOpen ? "w-64" : "w-0"
         }`}
       >
+        {/* Logo */}
+        {isSidebarOpen && (
+          <div className="flex items-center justify-center p-4">
+            <img src={logo} className="w-12 h-12" alt="Logo" />
+          </div>
+        )}
+
         <div className={`p-4 ${isSidebarOpen ? "block" : "hidden"}`}>
           <ul className="space-y-4">
             <li className="bg-[#DFBC8A] p-2 rounded-lg text-white">Dashboard</li>
