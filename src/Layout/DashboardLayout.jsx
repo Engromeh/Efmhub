@@ -1,19 +1,25 @@
 import React, { useState } from "react";
 import logo from "../../photo/dashpord.svg";
-import themeIcon from "../../photo/Frame 9.png";
-import mailIcon from "../../photo/mail.png";
+import photo from "../../photo/photo_2024-11-06_17-06-38-removebg-preview 1.png";
 
 const DashBoardLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [userPhoto, setUserPhoto] = useState(
     "https://flowbite.com/docs/images/people/profile-picture-5.jpg"
   );
+  const [showPhotoModal, setShowPhotoModal] = useState(false);
+  const [showMessagesModal, setShowMessagesModal] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  // Handle photo change in the navbar
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle("dark");
+  };
+
   const handlePhotoChange = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -55,8 +61,22 @@ const DashBoardLayout = () => {
         </div>
 
         <div className="flex items-center space-x-4">
-          <img src={themeIcon} alt="Theme" className="w-6 h-6" />
-          <img src={mailIcon} alt="Mail" className="w-6 h-6" />
+          {/* Toggle Theme Button */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg bg-gray-200 hover:bg-gray-300"
+          >
+            {isDarkMode ? "🌙" : "☀️"}
+          </button>
+
+          {/* Messages Button */}
+          <button
+            onClick={() => setShowMessagesModal(true)}
+            className="p-2 rounded-lg bg-gray-200 hover:bg-gray-300"
+            title="فتح الرسائل"
+          >
+            📧
+          </button>
 
           {/* User Photo */}
           <div className="relative">
@@ -64,13 +84,7 @@ const DashBoardLayout = () => {
               className="w-8 h-8 rounded-full cursor-pointer"
               src={userPhoto}
               alt="User"
-            />
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handlePhotoChange}
-              className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
-              title="Change Profile Picture"
+              onClick={() => setShowPhotoModal(true)}
             />
           </div>
         </div>
@@ -82,13 +96,11 @@ const DashBoardLayout = () => {
           isSidebarOpen ? "w-64" : "w-0"
         }`}
       >
-        {/* Logo */}
         {isSidebarOpen && (
           <div className="flex items-center justify-center p-4">
             <img src={logo} className="w-12 h-12" alt="Logo" />
           </div>
         )}
-
         <div className={`p-4 ${isSidebarOpen ? "block" : "hidden"}`}>
           <ul className="space-y-4">
             <li className="bg-[#DFBC8A] p-2 rounded-lg text-white">Dashboard</li>
@@ -103,35 +115,56 @@ const DashBoardLayout = () => {
         </div>
       </aside>
 
-      {/* Main Content */}
-      <main
-        className={`pt-24 transition-all duration-300 ${
-          isSidebarOpen ? "ml-64" : "ml-0"
-        }`}
-        style={{ minHeight: "100vh", backgroundColor: "#f8f8f8" }}
-      >
-        <div className="p-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-xl text-[#77808B]">Current Balance</h2>
-              <p className="text-3xl font-bold text-[#DFBC8A]">$155.339 EG</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-xl text-[#77808B]">Advertiser Stats</h2>
-              <ul className="space-y-2 mt-4">
-                <li>Ad Credits: 0</li>
-                <li>Video Ads Credits: 0</li>
-                <li>Banner Credits: 0</li>
-              </ul>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-xl text-[#77808B]">Referral Stats</h2>
-              <p>Direct Referrals: 0</p>
-              <p>Earned so far: 0 EGP</p>
-            </div>
+      
+        {/* Footer Image */}
+        <img
+          src={photo}
+          className="absolute bottom-4 right-4 w-32 h-32 sm:w-64 sm:h-64"
+          alt="Mascot"
+        />
+  
+
+      {/* Photo Modal */}
+      {showPhotoModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h2 className="text-center text-2xl mb-4">Profile Picture</h2>
+            <img
+              src={userPhoto}
+              className="w-40 h-40 rounded-full mx-auto mb-4"
+              alt="User"
+            />
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handlePhotoChange}
+              className="block w-full text-sm text-gray-600"
+            />
+            <button
+              onClick={() => setShowPhotoModal(false)}
+              className="mt-4 bg-gray-200 p-2 rounded w-full"
+            >
+              Close
+            </button>
           </div>
         </div>
-      </main>
+      )}
+
+      {/* Messages Modal */}
+      {showMessagesModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h2 className="text-center text-2xl mb-4">Messages</h2>
+            <p>Here are your messages!</p>
+            <button
+              onClick={() => setShowMessagesModal(false)}
+              className="mt-4 bg-gray-200 p-2 rounded w-full"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };
