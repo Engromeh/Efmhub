@@ -14,7 +14,11 @@ const DashBoardLayout = () => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full bg-white border-b border-gray-200 z-50 flex items-center justify-between px-4 py-3 shadow">
+      <nav
+        className={`fixed top-0 ${
+          isSidebarOpen ? "left-64" : "left-0"
+        } right-0 bg-white border-b border-gray-200 z-50 flex items-center justify-between px-6 py-4 shadow transition-all duration-300`}
+      >
         <div className="flex items-center">
           <button
             onClick={toggleSidebar}
@@ -33,7 +37,7 @@ const DashBoardLayout = () => {
               ></path>
             </svg>
           </button>
-          <h1 className="text-xl sm:text-2xl text-[#77808B] ml-2">Dashboard User EFM</h1>
+          <h1 className="text-2xl text-[#77808B] ml-4">Dashboard User EFM</h1>
         </div>
 
         <div className="flex items-center space-x-4">
@@ -48,19 +52,21 @@ const DashBoardLayout = () => {
       </nav>
 
       <aside
-        className={`fixed top-0 left-0  w-64 h-full bg-white border-r border-gray-200 transition-transform ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 left-0 z-40 h-full bg-white border-r border-gray-200 transition-transform duration-300 ${
+          isSidebarOpen ? "w-64" : "w-0"
         }`}
       >
-        <div className="flex items-center justify-start p-4">
-          <img src={logo} className="w-10 h-10" alt="Logo" />
+        <div
+          className={`flex items-center justify-start p-4 transition-opacity duration-300 ${
+            isSidebarOpen ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <img src={logo} className="w-12 h-12" alt="Logo" />
         </div>
 
-        <div className="p-4">
+        <div className={`p-4 ${isSidebarOpen ? "block" : "hidden"}`}>
           <ul className="space-y-4">
-            <li className="bg-[#DFBC8A] p-2 rounded-lg text-white">
-              Dashboard
-            </li>
+            <li className="bg-[#DFBC8A] p-2 rounded-lg text-white">Dashboard</li>
             <li>Upgrade Account</li>
             <li>New Order</li>
             <li>Add Funds</li>
@@ -73,10 +79,12 @@ const DashBoardLayout = () => {
       </aside>
 
       <main
-        className={`pt-24 transition-all ${isSidebarOpen ? "ml-64" : "ml-0"}`}
+        className={`pt-24 transition-all duration-300 ${
+          isSidebarOpen ? "ml-64" : "ml-0"
+        }`}
         style={{ minHeight: "100vh", backgroundColor: "#f8f8f8" }}
       >
-        <div className="p-4">
+        <div className="p-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h2 className="text-xl text-[#77808B]">Current Balance</h2>
