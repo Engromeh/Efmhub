@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../photo/dashpord.svg";
 import photo from "../../photo/photo_2024-11-06_17-06-38-removebg-preview 1.png";
+import { Outlet } from "react-router-dom";
 
 const DashBoardLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -148,20 +149,35 @@ const DashBoardLayout = () => {
 
       {/* Main Content */}
       <main
-        className={`pt-24 transition-all duration-300 ${
-          isSidebarOpen ? "ml-64" : "ml-0"
-        }`}
-        style={{ minHeight: "100vh", backgroundColor: "#f8f8f8" }}
-      >
-        <div className="p-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-xl text-[#77808B]">Current Balance</h2>
-              <p className="text-3xl font-bold text-[#DFBC8A]">$155.339 EG</p>
-            </div>
-          </div>
-        </div>
+  className={`pt-24 transition-all duration-300 ${
+    isSidebarOpen ? "ml-64" : "ml-0"
+  }`}
+  style={{ minHeight: "100vh", backgroundColor: "#f8f8f8" }}
+>
+  <div
+    style={{
+      color: "#555",
+      textAlign: "left",
+      fontWeight: "bold",
+      fontSize: "1.5rem",
+      backgroundColor: "#d3d3d3",
+      padding: "304px 630px",
+      borderRadius: "27px 28px 29px 30px",
+      marginBottom: "-4px",
+      width: "100%",
+      height: "100%",
+      boxSizing: "border-box",
+    }}
+  >
+<Outlet/>
+  </div>
+  <div className="p-8">
 
+
+  </div>
+     
+      
+       
         {/* Footer Image */}
         <img
           src={photo}
