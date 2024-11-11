@@ -7,7 +7,6 @@
   padding: 20px;
 }
 
-/* الشعار والزر العلوي */
 .headerSection {
   display: flex;
   justify-content: space-between;
@@ -30,7 +29,6 @@
   width: auto;
 }
 
-/* نموذج السحب */
 .withdrawFormContainer {
   background-color: #f9f9f9;
   padding: 20px;
@@ -52,25 +50,9 @@
   color: #EAD7BC;
 }
 
-.formInput {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
 
-.inputWithUnit {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
 
-.inputUnit {
-  margin-left: 10px;
-  color: #EAD7BC;
-}
+
 
 .buttonsContainer {
   display: flex;
@@ -107,7 +89,7 @@
   width: 30px;
 }
 
-/* المودال */
+
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -134,9 +116,57 @@
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 15px;
+  color: #DFBC8A;
+}
+.inputWithIcon {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
-/* تحسينات الريسبونسف */
+.iconInsideInput {
+  position: absolute;
+  left: 15px; 
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px; 
+  pointer-events: none;
+}
+
+.formInput {
+  width: 100%;
+  padding: 12px 12px 12px 50px; 
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  outline: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.formInput::placeholder {
+  color: #b3b3b3;
+}
+
+.inputUnit {
+  margin-left: 10px;
+  color: #EAD7BC;
+  font-size: 14px;
+}
+
+.formInput:focus {
+  border-color: #d4a259;
+  box-shadow: 0 0 5px rgba(212, 162, 89, 0.4);
+}
+
+
+
+
+
+
+
 @media (max-width: 768px) {
   .withdrawContainer {
     padding: 15px;
@@ -202,4 +232,12 @@
   .addWithdrawButton {
     font-size: 0.9em;
   }
+}
+.iconInsideInput {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  pointer-events: none;
 }

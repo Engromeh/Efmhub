@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import withdrawstyles from './WithdrawFunds.module.css';
-// تأكد من وضع المسارات الصحيحة للشعارات في الاستيراد
-// import headerLogo from './path-to-header-logo.png';
-// import paymentLogo1 from './path-to-payment-logo1.png';
-// import paymentLogo2 from './path-to-payment-logo2.png';
-// import paymentLogo3 from './path-to-payment-logo3.png';
-
+import headerLogo from '../../../../photo/logo withedraw.svg';
+import etselit from '../../../../photo/etsalit.svg';
+import vodefon from '../../../../photo/vodefone.svg';
+import bank from '../../../../photo/banx.svg';
+import instpay from '../../../../photo/انستباي.svg';
+import amountIcon from '../../../../photo/amount.svg';
+import totalIcon from '../../../../photo/withdraw.svg'
 const WithdrawFunds = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -15,57 +16,58 @@ const WithdrawFunds = () => {
   return (
     <>
       <div className={withdrawstyles.withdrawContainer}>
-        {/* الشعار العلوي وزر إضافة الحساب */}
         <div className={withdrawstyles.headerSection}>
+
           <button className={withdrawstyles.addWithdrawButton} onClick={openModal}>
             Add Withdraw Account
           </button>
         </div>
 
-        {/* نموذج السحب */}
         <h2 className={withdrawstyles.formTitle}>Withdraw Funds</h2>
         <div className={withdrawstyles.withdrawFormContainer}>
           <form className={withdrawstyles.withdrawForm}>
-            <img src="" alt="Header Logo" className={withdrawstyles.headerLogo} />
+            <img src={headerLogo} alt="Header Logo" className={withdrawstyles.headerLogo} />
 
-            {/* الحقل الأول */}
             <label className={withdrawstyles.formLabel}>Method</label>
+            <div className={withdrawstyles.inputWithIcon}>
+              <img src={vodefon} alt="Vodafone Icon" className={withdrawstyles.iconInsideInput} />
             <select className={withdrawstyles.formInput}>
               <option>Vodafone Cash</option>
               <option>Bank Transfer</option>
               <option>PayPal</option>
             </select>
-
-            {/* الحقل الثاني */}
+</div>
             <label className={withdrawstyles.formLabel}>Amount</label>
             <div className={withdrawstyles.inputWithUnit}>
-              <input type="text" className={withdrawstyles.formInput} placeholder="0" />
+            <div className={withdrawstyles.inputWithIcon}>
+              <img src={amountIcon} alt="Amount Icon" className={withdrawstyles.iconInsideInput} />
+              <input type="text" className={withdrawstyles.formInput} placeholder="" />
               <span className={withdrawstyles.inputUnit}>EGP</span>
             </div>
-
-            {/* الحقل الثالث */}
+</div>
             <label className={withdrawstyles.formLabel}>Total</label>
             <div className={withdrawstyles.inputWithUnit}>
-              <input type="text" className={withdrawstyles.formInput} placeholder="0" readOnly />
+            <div className={withdrawstyles.inputWithIcon}>
+              <img src={totalIcon} alt="Total Icon" className={withdrawstyles.iconInsideInput} />
+              <input type="text" className={withdrawstyles.formInput} placeholder="" readOnly />
               <span className={withdrawstyles.inputUnit}>EGP</span>
             </div>
-
-            {/* الأزرار */}
+</div>
             <div className={withdrawstyles.buttonsContainer}>
               <button className={withdrawstyles.upgradeButton}>Upgrade</button>
               <button className={withdrawstyles.cancelButton} type="button">Cancel</button>
             </div>
           </form>
 
-          {/* الشعارات السفلية */}
           <div className={withdrawstyles.paymentLogos}>
-            <img src="" alt="Payment Logo 1" />
-            <img src="" alt="Payment Logo 2" />
-            <img src="" alt="Payment Logo 3" />
+          <img src={etselit} alt="logo" />
+          <img src={instpay} alt="logo" />
+          <img src={vodefon} alt="logo" />
+          <img src={bank} alt="logo" />
+
           </div>
         </div>
 
-        {/* المودال */}
         {isModalOpen && (
           <div className={withdrawstyles.modalOverlay}>
             <div className={withdrawstyles.modalContent}>
