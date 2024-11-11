@@ -24,6 +24,7 @@ import AddFunds from "../Component/DashBoard/AddFunds/AddFunds";
 import WithdrawFunds from "../Component/DashBoard/WithdrawFunds/WithdrawFunds";
 import Tasks from "../Component/DashBoard/Task/Task";
 import PersonalSettings from "../Component/DashBoard/PersonalSettings/PersonalSettings";
+import CreateTicket from "../Component/DashBoard/CreateTicket/CreateTicket";
 
 const Router =createBrowserRouter(
 
@@ -57,6 +58,8 @@ const Router =createBrowserRouter(
 <Route path="/Historysection" element={<Historysection/>} />
 <Route path="/task" element={<Tasks/>} />
 <Route path="/PersonalSettings" element={<PersonalSettings/>} />
+<Route path="/CreateTicket" element={<CreateTicket/>} />
+
       </>  
     )
 

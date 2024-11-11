@@ -9,17 +9,20 @@ import { useState } from 'react';
 // import closeIcon from '../../../../photo/close.svg';
 
 const AddFunds = () => {
-  const [selectedFiles, setSelectedFiles] = useState([]);
+  const [selectedFile, setSelectedFile] = useState([]);
 
   const handleFileChange = (event) => {
-    const files = Array.from(event.target.files);
-    setSelectedFiles([...selectedFiles, ...files]);
+    const file = event.target.files[0];
+    if (file) {
+      setSelectedFile(URL.createObjectURL(file));
+    }
   };
 
-  const handleRemoveFile = (index) => {
-    const updatedFiles = selectedFiles.filter((_, i) => i !== index);
-    setSelectedFiles(updatedFiles);
+  const handleRemoveFile = () => {
+    setSelectedFile(null);
   };
+
+  
 
   return (
     <div className={Addfundsstyles.containerAddFunds}>
@@ -59,34 +62,36 @@ const AddFunds = () => {
   </div>
 </div>
 
-
-          <label htmlFor="upload">Uploading the file</label>
+<label className={Addfundsstyles.label}>Uploading the file</label>
+        <div className={Addfundsstyles.fileUploadContainer}>
+          <input
+            type="file"
+            id="file"
+            onChange={handleFileChange}
+            className={Addfundsstyles.fileInput}
+          />
+          <label htmlFor="file" className={Addfundsstyles.fileLabel}>
+            <img src="{uploadIcon}" alt="Upload" />
+            Attach The File
+          </label>
           <p className={Addfundsstyles.instruction}>The screen must be clear</p>
-          <div className={Addfundsstyles.fileUploadContainer}>
-            <input
-              type="file"
-              id="upload"
-              name="upload"
-              multiple
-              onChange={handleFileChange}
-              className={Addfundsstyles.fileInput}
-            />
-            <span className={Addfundsstyles.placeholder}>Attach The File</span>
-          </div>
+        </div>
 
-          <div className={Addfundsstyles.filePreviewContainer}>
-            {selectedFiles.map((file, index) => (
-              <div key={index} className={Addfundsstyles.filePreview}>
-                <span>{file.name}</span>
-                <img
-                  src="{closeIcon}"
-                  alt="Remove"
-                  onClick={() => handleRemoveFile(index)}
-                  className={Addfundsstyles.removeIcon}
-                />
-              </div>
-            ))}
+        {/* Preview Uploaded File */}
+        {selectedFile && (
+          <div className={Addfundsstyles.previewContainer}>
+            <img src={selectedFile} alt="Preview" className={Addfundsstyles.previewImage} />
+            <button type="button" onClick={handleRemoveFile} className={Addfundsstyles.removeButton}>
+              Remove
+            </button>
           </div>
+        )}
+
+    
+
+          
+          
+
 
           <div className={Addfundsstyles.feesAddFunds}>
             <div>
