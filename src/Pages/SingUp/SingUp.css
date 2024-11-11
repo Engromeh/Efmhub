@@ -97,7 +97,7 @@
   
   .login-form input[type="email"]::placeholder,
   .login-form input[type="password"]::placeholder {
-    color: #bbb; /* لون العنصر النائب */
+    color: #bbb; 
   }
   
   

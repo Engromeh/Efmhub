@@ -23,6 +23,7 @@ import UpgradeAccount from "../Component/DashBoard/Upgreedaccount/Upgreedaccount
 import AddFunds from "../Component/DashBoard/AddFunds/AddFunds";
 import WithdrawFunds from "../Component/DashBoard/WithdrawFunds/WithdrawFunds";
 import Tasks from "../Component/DashBoard/Task/Task";
+import PersonalSettings from "../Component/DashBoard/PersonalSettings/PersonalSettings";
 
 const Router =createBrowserRouter(
 
@@ -55,6 +56,7 @@ const Router =createBrowserRouter(
 <Route path="/Upgreedaccount" element={<UpgradeAccount/>} />
 <Route path="/Historysection" element={<Historysection/>} />
 <Route path="/task" element={<Tasks/>} />
+<Route path="/PersonalSettings" element={<PersonalSettings/>} />
       </>  
     )
 
