@@ -43,8 +43,34 @@
   .logo {
     width: 60px;
     margin-bottom: 20px;
-    margin-left: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
+  
+  @media (min-width: 768px) {
+    .logo {
+      margin-left: 500px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .logo {
+      width: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+ @media (max-width: 480px) {
+    .logo {
+      width: 40px;
+      margin-left: 300px;
+      margin-right: auto;
+    }
+  }
+  
   
   .form {
     display: flex;

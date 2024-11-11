@@ -77,7 +77,6 @@ const AddFunds = () => {
           <p className={Addfundsstyles.instruction}>The screen must be clear</p>
         </div>
 
-        {/* Preview Uploaded File */}
         {selectedFile && (
           <div className={Addfundsstyles.previewContainer}>
             <img src={selectedFile} alt="Preview" className={Addfundsstyles.previewImage} />
