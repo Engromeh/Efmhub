@@ -19,7 +19,9 @@ const CreateTicket = () => {
 
   return (
     <div className={CreateTicketStyle.container}>
-      <h2 className={CreateTicketStyle.title}>Create Ticket</h2>
+    
+      <h2  style={{marginBottom:"-38px" , fontsize:" 1.8rem" , fontweight: "bold" ,color:" #808892"}}
+>Create Ticket</h2>
       <img src={logo} alt="Logo" className={CreateTicketStyle.logo} />
 
         <form className={CreateTicketStyle.form}>

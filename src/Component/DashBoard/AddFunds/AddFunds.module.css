@@ -17,6 +17,8 @@
 .subtitleAddFunds {
   font-size: 24px;
   font-weight: bold;
+  color: #808892;
+  margin-bottom: 2px;
 }
 .inputWithIcon {
   position: relative;
@@ -61,11 +63,13 @@
 .contactAddFunds {
   display: flex;
   align-items: center;
+  color:#d4a259;
+  font-weight: bold;
 }
 
 .iconAddFunds {
-  margin-right: 8px;
-  height: 20px;
+  margin-right: -119px;
+  height: 40px;
 }
 
 .cardAddFunds {
@@ -226,6 +230,7 @@ label {
   padding: 12px;
   border-radius: 5px;
   cursor: pointer;
+  width: 205px;
 }
 
 .cancelBtnAddFunds {
@@ -235,6 +240,9 @@ label {
   padding: 12px;
   border-radius: 5px;
   cursor: pointer;
+  width: 214px;
+  margin-right: 36px;
+
 }
 
 .footerLogosAddFunds {

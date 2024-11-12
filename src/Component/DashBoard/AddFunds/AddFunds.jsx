@@ -5,6 +5,8 @@ import vodefon from '../../../../photo/vodefone.svg';
 import bank from '../../../../photo/banx.svg';
 import instpay from '../../../../photo/انستباي.svg';
 import linkIcon from '../../../../photo/amount.svg';
+import orange from "../../../../photo/orange.svg"
+import we from "../../../../photo/we pay.svg"
 import { useState } from 'react';
 // import closeIcon from '../../../../photo/close.svg';
 
@@ -71,10 +73,8 @@ const AddFunds = () => {
             className={Addfundsstyles.fileInput}
           />
           <label htmlFor="file" className={Addfundsstyles.fileLabel}>
-            <img src="{uploadIcon}" alt="Upload" />
             Attach The File
           </label>
-          <p className={Addfundsstyles.instruction}>The screen must be clear</p>
         </div>
 
         {selectedFile && (
@@ -114,10 +114,13 @@ const AddFunds = () => {
         </form>
 
         <div className={Addfundsstyles.footerLogosAddFunds}>
-          <img src={etselit} alt="logo" />
+          <img src={orange} alt="logo" />
+          <img src={we} alt="logo" />
           <img src={instpay} alt="logo" />
           <img src={vodefon} alt="logo" />
           <img src={bank} alt="logo" />
+          <img src={etselit} alt="logo" />
+
         </div>
       </div>
 
