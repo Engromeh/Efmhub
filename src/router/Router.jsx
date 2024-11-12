@@ -28,6 +28,7 @@ import CreateTicket from "../Component/DashBoard/CreateTicket/CreateTicket";
 import Orders from "../Component/DashBoard/Order/Order";
 import NotFound from "../Pages/Notfound/NotFound";
 import TicketsTable from "../Component/DashBoard/TicketsTable/TicketsTable";
+import News from "../Component/DashBoard/News/News";
 
 const Router =createBrowserRouter(
 
@@ -65,6 +66,8 @@ const Router =createBrowserRouter(
 <Route path="/Orders" element={<Orders/>} />
 <Route path="/Notfounds" element={<NotFound/>} />
 <Route path="/Tickettable" element={<TicketsTable/>} />
+<Route path="/News" element={<News/>} />
+
 
 
 
