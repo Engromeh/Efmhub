@@ -27,6 +27,7 @@ import PersonalSettings from "../Component/DashBoard/PersonalSettings/PersonalSe
 import CreateTicket from "../Component/DashBoard/CreateTicket/CreateTicket";
 import Orders from "../Component/DashBoard/Order/Order";
 import NotFound from "../Pages/Notfound/NotFound";
+import TicketsTable from "../Component/DashBoard/TicketsTable/TicketsTable";
 
 const Router =createBrowserRouter(
 
@@ -63,6 +64,8 @@ const Router =createBrowserRouter(
 <Route path="/CreateTicket" element={<CreateTicket/>} />
 <Route path="/Orders" element={<Orders/>} />
 <Route path="/Notfounds" element={<NotFound/>} />
+<Route path="/Tickettable" element={<TicketsTable/>} />
+
 
 
 
