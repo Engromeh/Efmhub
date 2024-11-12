@@ -4,7 +4,7 @@ const Current = () => {
   return (
     <div className={curentstyles.currentContainer}>
       <div className={curentstyles.currentHeader}>
-        <h2>Upgrade Account</h2>
+        <h2>Current</h2>
         <img src="/logo.png" alt="EFM Logo" className={curentstyles.currentLogo} />
       </div>
 
