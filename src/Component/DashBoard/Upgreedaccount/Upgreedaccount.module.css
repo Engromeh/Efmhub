@@ -11,8 +11,15 @@
 
 .upgradeTitle {
   font-size: 24px;
-  color: #4a4a4a;
+  color: #808892;
   margin-bottom: 20px;
+  margin-left: 650px
+}
+.logoUpgrade{
+  max-width: 100%;
+    height: auto;
+    margin-left: 275px;
+    margin-bottom: 33px
 }
 
 .accountBalance {
@@ -39,11 +46,14 @@
   font-size: 1.8em;
   color: #EAD7BC;
   font-weight: bold;
+  margin-top: 13px;
 }
 
 .balanceDate {
   font-size: 0.9em;
   color: #EAD7BC;
+  margin-top: -29px;
+    margin-left: 466px
 }
 
 .upgradeForm {
@@ -61,18 +71,49 @@
 }
 
 .selectContainer {
+  position: relative;
+  width: 100%;
+}
+
+.selectWrapper {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 10px;
+}
+
+.selectIcon {
+  position: absolute;
+  left: 10px; 
+  width: 20px; 
+  height: 20px;
+  pointer-events: none; 
+}
+.selectWrapper::after {
+
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* لمنع التفاعل مع السهم */
+  color: #d4af37; /* لون السهم */
 }
 
 .formInput {
+  appearance: none; 
   width: 100%;
-  padding: 12px;
+  height: 50px;
+  padding-left: 40px; 
+  font-size: 16px;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #fff;
+  color:#d3a15a;
 }
+
+.formInput::-ms-expand {
+  display: none; 
+}
+
+
+
 
 .buttonsContainer {
   display: flex;
