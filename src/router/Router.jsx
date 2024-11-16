@@ -32,6 +32,7 @@ import News from "../Component/DashBoard/News/News";
 import Currencies from "../Component/DashBoard/Currencies/Currencies.jsx";
 import InvoicePage from "../Component/DashBoard/InvoicePage/InvoicePage.jsx";
 import DirectReferrals from "../Component/DashBoard/DirectReferrals/DirectReferrals.jsx";
+import ChatTicket from "../Component/DashBoard/ChatTicket/ChatTicket.JSX";
 
 const Router =createBrowserRouter(
 
@@ -72,6 +73,8 @@ const Router =createBrowserRouter(
 <Route path="/News" element={<News/>} />
 <Route path="/InvoicePage" element={<InvoicePage/>} />
 <Route path="/DirectReferrals" element={<DirectReferrals/>} />
+<Route path="/Chatticket" element={<ChatTicket/>} />
+
 
 
 
