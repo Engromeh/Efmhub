@@ -15,7 +15,7 @@ import Aboutus from "../Component/Homepage/AboutUsSection/AboutUs";
 import Membership from "../Component/Homepage/MembershipSection/Membership";
 import Payment from "../Component/Homepage/PaymentSection/Payment";
 import Faq from "../Component/Homepage/Faq/Faq";
-import Current from "../Component/DashBoard/Current/Current.JSX";
+// import Current from "../Component/DashBoard/Currencies/Currencies.jsx";
 import Historysection from "../Component/DashBoard/Historysection/Historysection";
 import NewOrder from "../Component/DashBoard/NewOrder/NewOrder";
 import PrivacyPolicy from "../Component/DashBoard/PrivacyPolicy/PrivacyPolicy";
@@ -29,6 +29,9 @@ import Orders from "../Component/DashBoard/Order/Order";
 import NotFound from "../Pages/Notfound/NotFound";
 import TicketsTable from "../Component/DashBoard/TicketsTable/TicketsTable";
 import News from "../Component/DashBoard/News/News";
+import Currencies from "../Component/DashBoard/Currencies/Currencies.jsx";
+import InvoicePage from "../Component/DashBoard/InvoicePage/InvoicePage.jsx";
+import DirectReferrals from "../Component/DashBoard/DirectReferrals/DirectReferrals.jsx";
 
 const Router =createBrowserRouter(
 
@@ -55,7 +58,7 @@ const Router =createBrowserRouter(
 </Route>
 <Route path='/AddFunds' element={<AddFunds/>} /> 
  <Route path="/WithdrawFunds" element={<WithdrawFunds/>} />
-<Route path="/Current" element={<Current/>} />
+<Route path="/Currencies" element={<Currencies/>} />
 <Route path='/NewOrder' element={<NewOrder/>} />
 <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
 <Route path="/Upgreedaccount" element={<UpgradeAccount/>} />
@@ -67,6 +70,9 @@ const Router =createBrowserRouter(
 <Route path="/Notfounds" element={<NotFound/>} />
 <Route path="/Tickettable" element={<TicketsTable/>} />
 <Route path="/News" element={<News/>} />
+<Route path="/InvoicePage" element={<InvoicePage/>} />
+<Route path="/DirectReferrals" element={<DirectReferrals/>} />
+
 
 
 
