@@ -56,12 +56,16 @@ const DirectReferrals = () => {
 
       {/* Children Boxes */}
       <div style={styles.childrenContainer}>
+        {/* Start and End markers for horizontal line */}
+        <div style={styles.horizontalLineStart}></div>
         <motion.div
           style={styles.horizontalLine}
           initial={{ width: 0 }}
           animate={{ width: "90%" }}
           transition={{ duration: 0.5, delay: 0.6 }}
         ></motion.div>
+        <div style={styles.horizontalLineEnd}></div>
+
         {data.children.map((child, index) => (
           <div key={index} style={styles.childWrapper}>
             <div style={styles.arrow}></div>
@@ -186,15 +190,35 @@ const styles = {
     bottom: "-60px",
     left: "50%",
     transform: "translateX(-50%)",
-    top: "-77px",
   },
   horizontalLine: {
     position: "absolute",
     height: "2px",
     backgroundColor: "#ddd",
-    top: "-75px",
-    left: "%",
+    top: "-68px",
+    left: "9%",
     zIndex: 1,
+    width: "82%"
+  },
+  horizontalLineStart: {
+    position: "absolute",
+    width: "2px",
+    height: "2px",
+    backgroundColor: "#ddd",
+    borderRadius: "50%",
+    top: "20px",
+    left: "5%",
+    zIndex: 2,
+  },
+  horizontalLineEnd: {
+    position: "absolute",
+    width: "2px",
+    height: "2px",
+    backgroundColor: "#ddd",
+    borderRadius: "50%",
+    top: "20px",
+    right: "5%",
+    zIndex: 2,
   },
   arrow: {
     position: "absolute",
@@ -214,32 +238,6 @@ const styles = {
   email: {
     fontSize: "14px",
     color: "#777",
-  },
-  "@media (max-width: 768px)": {
-    container: {
-      padding: "10px",
-    },
-    parentBox: {
-      width: "90%",
-    },
-    intermediateBox: {
-      width: "80%",
-    },
-    childrenContainer: {
-      flexWrap: "wrap",
-    },
-    childBox: {
-      width: "100px",
-      padding: "5px",
-    },
-    imageContainer: {
-      width: "60px",
-      height: "60px",
-    },
-    image: {
-      width: "40px",
-      height: "40px",
-    },
   },
 };
 
