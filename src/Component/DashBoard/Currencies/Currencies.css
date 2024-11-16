@@ -1,0 +1,143 @@
+.currencies-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 24px;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.exchange-result {
+  display: flex;
+  justify-content: space-between; /* يوزع العناصر على الجانبين */
+  align-items: center; /* يضمن أن العناصر في نفس المستوى الرأسي */
+  color: #DFBC8A;
+}
+.TOTALRESULT{
+ display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.money{
+  font-size: 20px;
+  color: #C7C7C7;
+  font-weight: bold;
+}
+.result{
+  font-size: 24px;
+  color:#C7C7C7 ;
+  font-weight: bold;
+}
+
+
+
+.balance {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #DFBC8A;
+  font-size: 14px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.input-with-icon {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background: #f9f9f9;
+  position: relative;
+}
+
+.input-with-icon img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.input-with-icon input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  background: transparent;
+}
+
+.input-with-icon .input-currency {
+  color: #888;
+  font-size: 14px;
+}
+
+.select-container {
+  position: relative;
+}
+
+.select-container select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+  appearance: none;
+  font-size: 16px;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.footer-logos img {
+  width: 40px;
+  height: 40px;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #aaa;
+}

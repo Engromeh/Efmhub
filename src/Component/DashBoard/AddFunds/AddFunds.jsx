@@ -26,7 +26,6 @@ const AddFunds = () => {
       border: "1px solid #ddd",
       borderRadius: "5px",
       padding: "5px",
-      width: "100%",
     }),
     option: (base, state) => ({
       ...base,
@@ -105,11 +104,11 @@ const AddFunds = () => {
           <div style={styles.inputWrapper}>
             <label style={styles.label}>Method of transfer</label>
             <div style={styles.inputWithIcon}>
-              <img style={{backgroundColor:"red"}} src={selectedLogo} alt="method logo" />
+              <img style={styles.icon} src={selectedLogo} alt="method logo" />
               <Select
                 options={options}
                 onChange={handleMethodChange}
-                styles={{width:"100%"}}
+                styles={customStyles}
                 formatOptionLabel={formatOptionLabel}
                 isSearchable={false}
               />
@@ -243,7 +242,6 @@ const styles = {
   },
   inputWrapper: {
     marginBottom: "15px",
-    width:"100%"
   },
   label: {
     display: "block",
@@ -252,31 +250,18 @@ const styles = {
     color: "#666",
     fontWeight: "bold",
   },
-  
-    inputWithIcon: {
-      display: "flex",
-      alignItems: "center",
-      border: "1px solid #ddd",
-      borderRadius: "5px",
-      height: "50px",
-      width: "100%", // تمديد العنصر بالكامل
-      overflow: "hidden", // منع تجاوز المحتوى
-    },
-    select: {
-   
-      fontSize: "16px",
-      height: "100%", // لضمان ملء السليكت الارتفاع بالكامل
-      padding: "0 10px", // إضافة تباعد داخلي
-      appearance: "none", // إزالة السهم الافتراضي للقائمة المنسدلة
-      backgroundColor: "transparent", // إزالة خلفية السليكت الافتراضية
-    },
-    icon: {
-      width: "30px", // حجم الأيقونة
-      height: "30px",
-      margin: "0 10px", // تباعد بين الأيقونة والقائمة
-    },
-  
-  
+  inputWithIcon: {
+    display: "flex",
+    alignItems: "center",
+    border: "1px solid #ddd",
+    borderRadius: "5px",
+    padding: "10px",
+  },
+  icon: {
+    marginRight: "10px",
+    width: "40px",
+    height: "40px",
+  },
   fileUpload: {
     display: "flex",
     alignItems: "center",
