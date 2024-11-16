@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import copy from '../../../../photo/Vector.svg';
-import etselit from '../../../../photo/etsalit.svg';
-import vodefon from '../../../../photo/vodefone.svg';
-import bank from '../../../../photo/banx.svg';
-import instpay from '../../../../photo/انستباي.svg';
-import linkIcon from '../../../../photo/amount.svg';
-import orange from '../../../../photo/orange.svg';
-import we from '../../../../photo/we pay.svg';
+import styled from "styled-components";
+import copy from "../../../../photo/Vector.svg";
+import etselit from "../../../../photo/etsalit.svg";
+import vodefon from "../../../../photo/vodefone.svg";
+import bank from "../../../../photo/banx.svg";
+import instpay from "../../../../photo/انستباي.svg";
+import linkIcon from "../../../../photo/amount.svg";
+import orange from "../../../../photo/orange.svg";
+import we from "../../../../photo/we pay.svg";
+import { useState } from "react";
 
 const Container = styled.div`
   max-width: 600px;
@@ -49,15 +49,58 @@ const Card = styled.div`
   border-radius: 10px;
 `;
 
+const TotalContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
+const TotalTitle = styled.h3`
+  font-size: 24px;
+  font-weight: bold;
+  color: #d4a259;
+`;
+
+const TotalAmount = styled.h3`
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+`;
+
+const SelectInputWithIcon = styled.div`
+  position: relative;
+  margin-bottom: 20px;
+`;
+
+const SelectIcon = styled.img`
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  pointer-events: none;
+`;
+
+const SelectInput = styled.select`
+  width: 100%;
+  padding: 12px 12px 12px 45px;
+  border: 1px solid #d4a259;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  outline: none;
+  font-size: 16px;
+`;
+
 const InputWithIcon = styled.div`
-    position: relative;
+  position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 `;
 
 const IconInsideInput = styled.img`
- position: absolute;
+  position: absolute;
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
@@ -66,34 +109,13 @@ const IconInsideInput = styled.img`
 `;
 
 const TextInput = styled.input`
-    width: 100%;
-  padding: 12px 12px 12px 45px; /* المسافة البادئة لضمان عدم تداخل الأيقونة مع النص */
+  width: 100%;
+  padding: 12px 12px 12px 45px;
   border: 1px solid #d4a259;
   border-radius: 8px;
   background-color: #f9f9f9;
   outline: none;
   font-size: 16px;
-  
-
-  @media (max-width: 768px) {
-    font-size: 14px;
-    padding: 10px 10px 10px 40px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 12px;
-    padding: 8px 8px 8px 35px;
-  }
-`;
-
-const SelectInput = styled.select`
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #d4a259;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  outline: none;
 `;
 
 const FileUploadContainer = styled.div`
@@ -147,16 +169,6 @@ const FeesContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  @media (max-width: 768px) {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-    gap: 10px;
-  }
 `;
 
 const FeesInput = styled.input`
@@ -166,19 +178,6 @@ const FeesInput = styled.input`
   border-radius: 8px;
   background-color: #f9f9f9;
   outline: none;
-  @media (max-width: 768px) {
-    width: 48%;
-    max-width: 180px;
-    padding: 6px;
-    font-size: 14px;
-  }
-
-  @media (max-width: 480px) {
-    width: 100%;
-    max-width: 100%;
-    padding: 6px;
-    font-size: 12px;
-  }
 `;
 
 const ButtonsContainer = styled.div`
@@ -204,6 +203,7 @@ const CancelButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
 `;
+
 const FooterLogos = styled.div`
   display: flex;
   justify-content: space-around;
@@ -221,18 +221,11 @@ const LogoImage = styled.img`
   &:hover {
     transform: scale(1.1);
   }
-
-  @media (max-width: 768px) {
-    height: 35px;
-  }
-
-  @media (max-width: 480px) {
-    height: 30px;
-  }
 `;
 
 const AddFunds = () => {
   const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedMethod, setSelectedMethod] = useState("vodafone");
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -243,6 +236,10 @@ const AddFunds = () => {
 
   const handleRemoveFile = () => {
     setSelectedFile(null);
+  };
+
+  const handleMethodChange = (e) => {
+    setSelectedMethod(e.target.value);
   };
 
   return (
@@ -256,23 +253,34 @@ const AddFunds = () => {
       </HeaderInfo>
 
       <Card>
-        {/* اختيار طريقة الدفع */}
-        <label>Method of Transfer</label>
-        <SelectInput>
-          <option value="vodafone">Vodafone Cash</option>
-          <option value="orange">Orange Cash</option>
-          <option value="we">WE Pay</option>
-          <option value="bank">Bank Transfer</option>
-        </SelectInput>
+        <TotalContainer>
+          <TotalTitle>Total</TotalTitle>
+          <TotalAmount>$0.0</TotalAmount>
+        </TotalContainer>
 
-        {/* حقل إدخال المبلغ */}
+        <label>Method of Transfer</label>
+        <SelectInputWithIcon>
+          <SelectIcon src='{transferIcon}' alt="Transfer Icon" />
+          <SelectInput value={selectedMethod} onChange={handleMethodChange}>
+            <option value="vodafone">Vodafone Cash</option>
+            <option value="orange">Orange Cash</option>
+            <option value="we">WE Pay</option>
+            <option value="bank">Bank Transfer</option>
+          </SelectInput>
+        </SelectInputWithIcon>
+
+        {selectedMethod !== "vodafone" && (
+          <p style={{ color: "#d4a259", fontWeight: "bold" }}>
+            Additional Steps Required!
+          </p>
+        )}
+
         <label>Amount</label>
         <InputWithIcon>
           <IconInsideInput src={linkIcon} alt="Link Icon" />
-          <TextInput type="text" placeholder=""  style={{width:"560px"}}/>
+          <TextInput type="text" placeholder="Enter Amount" />
         </InputWithIcon>
 
-        {/* رفع ملف */}
         <label>Uploading the File</label>
         <FileUploadContainer>
           <FileInput type="file" onChange={handleFileChange} />
@@ -286,27 +294,25 @@ const AddFunds = () => {
           </PreviewContainer>
         )}
 
-        {/* الحقول الخاصة بالرسوم والضرائب */}
         <FeesContainer>
           <FeesInput type="text" placeholder="Fees" value="0" disabled />
           <FeesInput type="text" placeholder="Tax" value="0" disabled />
         </FeesContainer>
 
-        {/* أزرار الإرسال والإلغاء */}
         <ButtonsContainer>
           <SendButton>Send</SendButton>
           <CancelButton>Cancel</CancelButton>
         </ButtonsContainer>
       </Card>
-      <FooterLogos>
-  <LogoImage src={orange} alt="Orange" />
-  <LogoImage src={we} alt="We Pay" />
-  <LogoImage src={instpay} alt="Instapay" />
-  <LogoImage src={vodefon} alt="Vodafone" />
-  <LogoImage src={bank} alt="Bank Transfer" />
-  <LogoImage src={etselit} alt="Etsalit" />
-</FooterLogos>
 
+      <FooterLogos>
+        <LogoImage src={orange} alt="Orange" />
+        <LogoImage src={we} alt="We Pay" />
+        <LogoImage src={instpay} alt="Instapay" />
+        <LogoImage src={vodefon} alt="Vodafone" />
+        <LogoImage src={bank} alt="Bank Transfer" />
+        <LogoImage src={etselit} alt="Etsalit" />
+      </FooterLogos>
     </Container>
   );
 };
