@@ -93,7 +93,7 @@ const PersonalSettings = () => {
           <div className={PersonalSettingsstyle.inputGroup}>
             <div>
               <label>Email</label>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email"  />
             </div>
             <div>
               <label>Password</label>
@@ -194,7 +194,7 @@ const PersonalSettings = () => {
               <img
                 src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example"
                 alt="QR Code"
-                style={{justifyContent:"center" , marginLeft:"110px"}}
+                style={{justifyContent:"center" , marginLeft:"80px" , width:"65%"}}
               />
             </div>
             <div
