@@ -68,8 +68,10 @@ function Homes() {
       {/* General Stats */}
  <div className="card-container">
         <div className="general-stats-card">
-          <div className="card-header">General Stats</div>
-          <div className="card-content">
+          <div className="continer-header">
+          <span>General Stats</span>
+        
+           <div className="card-content-generl">
             <h4>Earning Balance Stats</h4>
             <div className="stats-grid">
               <div className="stat-item">
@@ -103,6 +105,7 @@ function Homes() {
             </div>
           </div>
         </div>
+      </div> 
       </div>
 {/* Daily Tasks */}
 <div className="card-container">

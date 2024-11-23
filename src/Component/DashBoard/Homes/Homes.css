@@ -1,144 +1,4 @@
-/* body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .balance-card {
-    background: linear-gradient(135deg, #d6a25f, #e3c08f);
-    width: 350px;
-    height: 200px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    color: white;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-title {
-    font-size: 14px;
-    color: #f8f4ec;
-    opacity: 0.8;
-    margin: 0;
-  }
-  
-  .card-amount {
-    font-size: 28px;
-    margin: 10px 0;
-    font-weight: bold;
-    color: #ffffff;
-  }
-  
-  .card-footer {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    color: #ffffff;
-    opacity: 0.8;
-  }
-  
-  .card-id {
-    font-size: 12px;
-  }
-  
-  .card-date {
-    font-size: 12px;
-  }
-  
-  .card-logo {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: "Georgia", serif;
-  }
-   */
-   /* body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .advertiser-card {
-    width: 300px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  
-  .card-header {
-    background-color: #d3d5d9;
-    padding: 15px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #ffffff;
-    text-align: center;
-    border-bottom: 1px solid #e0e0e0;
-  }
-  
-  .card-content {
-    padding: 15px;
-  }
-  
-  .stat-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
-    font-size: 14px;
-    color: #555555;
-  }
-  
-  .bullet {
-    width: 10px;
-    height: 10px;
-    background-color: #d6a25f;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .value {
-    font-weight: bold;
-    color: #d6a25f;
-  }
-   */
-   /* body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+
   
   .card-container {
     display: flex;
@@ -226,7 +86,28 @@
   .stat-item.disabled h3 {
     color: #a5a5a5;
   }
-   
+   .continer-header{
+    background-color: #a5a5a5 ;
+    height:500px;
+    border-radius:20px 20px 0px 0px; ;
+   }
+   .continer-header span {
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 100px;
+   }
+.card-content-generl{
+  background-color: #f7f7f7;
+  height: 500px;
+  border-radius:20px 20px 0px 0px; ;
+}
+.card-content-generl h4 {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
    body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
