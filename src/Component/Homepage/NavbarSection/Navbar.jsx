@@ -10,9 +10,9 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="headerss">
-      <img src={logo} alt="logo" className="logoss" />
-      <button className="hamburger" onClick={toggleMenu}>
+    <header className="Navbar-headerss">
+      <img src={logo} alt="logo" className="Navbar-logoss" />
+      <button className="Navbar-hamburger" onClick={toggleMenu}>
         ☰
       </button>
       <nav className={`nav ${isOpen ? "open" : ""}`}>
@@ -38,7 +38,7 @@ const Navbar = () => {
          
         </ul>
       </nav>
-      <div className="auth-buttons">
+      <div className="Navbar-auth-buttons">
         <button onClick={() => navgat("/Login")}>
           <p className="flex align-items-center ">
             Join us{" "}

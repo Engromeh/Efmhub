@@ -1,5 +1,4 @@
-/* تنسيق الحاوية الرئيسية للـ Navbar */
-.headerss {
+.Navbar-headerss {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,19 +12,18 @@
   z-index: 1000;
 }
 
-/* تعويض المساحة التي يشغلها الـ Navbar */
 .navbar-spacer {
-  height: 50px;
+  height: 50px
 }
 
-/* تنسيق الشعار */
-.logoss {
+
+.Navbar-logoss {
   max-width: 50px;
   height: auto;
 }
 
-/* تنسيق زر الـ hamburger */
-.hamburger {
+
+.Navbar-hamburger {
   display: none;
   font-size: 1.5em;
   background: none;
@@ -35,7 +33,7 @@
   margin-left: auto;
 }
 
-/* تنسيق القائمة */
+
 .nav {
   display: flex;
   gap: 15px;
@@ -58,10 +56,11 @@
   font-weight: bold;
 }
 .nav ul li :hover {
-  background-color: #DFBC8A; /* لون الخلفية عند تمرير الماوس */
-  color: rgb(0, 0, 0); /* لون النص عند تمرير الماوس */
-  border-radius: 8px; /* جعل الحواف مستديرة */
-  padding: 10px 15px; /* حواف داخلية */
+  background-color: #DFBC8A;
+  color: rgb(0, 0, 0); 
+  border-radius: 8px; 
+  
+  padding: 10px 15px;
 }
 
 .auth-buttons {
@@ -70,7 +69,7 @@
   align-items: center;
 }
 
-.auth-buttons button {
+.Navbar-auth-buttons button {
   background-color: #333;
   color: white;
   padding: 5px 10px;
@@ -81,7 +80,7 @@
 }
 
 @media (max-width: 768px) {
-  .headerss {
+  .Navbar-headerss {
     padding: 10px 20px;
   }
 
@@ -117,12 +116,12 @@
     text-align: center;
   }
 
-  .hamburger {
+  .Navbar-hamburger {
     display: block;
     font-size: 1.5em;
   }
 
-  .auth-buttons {
+  .Navbar-auth-buttons {
     display: none;
   }
 
@@ -153,7 +152,7 @@
     gap: 5px;
   }
 
-  .hamburger {
+  .Navbar-hamburger {
     font-size: 1.3em;
   }
 

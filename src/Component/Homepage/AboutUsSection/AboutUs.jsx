@@ -1,4 +1,3 @@
-import "./AboutUs.css";
 import loggggo from "../../../../photo/logo2.svg";
 import photo3 from "../../../../photo/photo3.svg";
 import logoo333 from "../../../../photo/logo3.svg";
@@ -17,9 +16,9 @@ const Aboutus = () => {
               alt="Panther Image"
               className="about-section-panther-image"
             />
-            <div className="efm-hub-container">
-              <img src={loggggo} alt="EFM Logo" className="efm-logo" />
-              <span className="efm-text">EFM HUB</span>
+            <div className="about-efm-hub-container">
+              <img src={loggggo} alt="EFM Logo" className="about-efm-logo" />
+              <span className="about-efm-text">EFM HUB</span>
             </div>
           </div>
           <div className="about-section-right-column">

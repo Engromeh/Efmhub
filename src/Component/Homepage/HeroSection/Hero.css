@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
-.welcome-section {
+.hero-welcome-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,17 +11,17 @@
     margin-top: 50px;
 }
 
-.welcome-section h1 {
+.hero-welcome-section h1 {
     font-size: 50px;
     color: #000000;
     margin-top: 10px;
 }
 
-.welcome-section .highlight {
+.hero-welcome-section .highlight {
     color: #DFBC8A; 
 }
 
-.highlight img {
+.hero-highlight img {
     position: absolute;
     bottom: -2px;
     left: 0;
@@ -29,13 +29,13 @@
     height: auto;
 }
 
-.welcome-image {
+.hero-welcome-image {
     max-width: 100%;
     height: auto;
     margin-top: 20px;
 }
 
-.statistics-section {
+.hero-statistics-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,30 +45,30 @@
     background-color: #ffffff;
 }
 
-.stat-item {
+.hero-stat-item {
     text-align: center;
 }
 
-.stat-item .number {
+.hero-stat-item .number {
     font-weight: bold;
     color: #000;
     font-size: 33px;
 }
 
-.stat-item .label {
+.hero-stat-item .label {
     font-size: 1em;
     color: #888;
     margin-left: 5px;
 }
 
-.section-divider-Hero {
+.hero-section-divider-Hero {
     width: 770px;
     height: 1.93px;
     background-color: #263238;
     margin-left: 335px;
     margin-bottom: 2px;
 }
-.about-section-icon-text {
+.hero-about-section-icon-text {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -88,75 +88,75 @@
     margin-left: -6px;
     font-weight: bold
 }
-.about-section-icon-text {
+.hero-about-section-icon-text {
     align-items: center;
   }
   @media (max-width: 640px) {
-    .about-section-icon-text {
+    .hero-about-section-icon-text {
       flex-direction: column;
       text-align: center;
     }
   }
   
-.about-section-icon{
+.hero-about-section-icon{
     margin-left: 15px;
 }
-.welcome-text {
+.hero-welcome-text {
     font-family: "Cairo", serif;
     font-size: 64px;
     font-weight: 600;
     color: #000;
 }
 
-.highlight {
+.hero-highlight {
     color: #DFBC8A;
     position: relative;
     display: inline-block;
     padding-bottom: 5px;
 }
 
-.statistics-section {
+.hero-statistics-section {
     display: flex;
     flex-direction: row; 
     gap: 189px;
     padding: 20px 0;
 }
 
-/* تحسينات للشاشات الصغيرة */
 @media (max-width: 600px) { 
-    .statistics-section {
+    .hero-statistics-section {
         flex-direction: column;
-        gap: 30px; /* تصغير الفجوة بين العناصر */
-        align-items: center; /* توسيط العناصر في العمود */
+        gap: 30px;
+
+        align-items: center;
     }
 
-    .stat-item .number {
-        font-size: 1.5em; /* تكبير الرقم لتتناسب مع الشاشات الصغيرة */
+    .hero-stat-item .number {
+        font-size: 1.5em; 
     }
 
-    .stat-item .label {
+    .hero-stat-item .label {
         font-size: 1em;
         text-align: center;
-        margin-left: 0; /* إزالة الهامش على الشاشات الصغيرة */
+        margin-left: 0;
     }
 
-    .welcome-section h1 {
-        font-size: 1.5em; /* تصغير حجم العنوان */
+    .hero-welcome-section h1 {
+        font-size: 1.5em;
         text-align: center;
     }
 
-    .welcome-image {
+    .hero-welcome-image {
         max-width: 80%;
-        margin: 20px auto; /* توسيط الصورة */
+        margin: 20px auto; 
     }
 
-    .section-divider-Hero {
-        width: 90%; /* جعل العرض مناسب للشاشات الصغيرة */
+    .hero-section-divider-Hero {
+        width: 90%;
         margin: 10px auto;
     }
 
-    .welcome-text {
-        font-size: 2em; /* تقليل حجم النص */
+    .hero-welcome-text {
+        font-size: 2em;
         text-align: center;
     }
 }

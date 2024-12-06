@@ -4,29 +4,29 @@ import emLogo from "../../../../photo/Vector 1.svg"
 const Hero = () => {
   return (
     <section>
-     <div className="welcome-section ">
-    <h1 className='welcome-text'>Welcome to <span className="highlight relative">EFM  <img src={emLogo} alt="" className='absolute'/></span> hub</h1>
-    <div className="about-section-icon-text flex items-center sm:flex-col sm:items-center lg:flex-row lg:items-start sm:gap-2 lg:gap-4 sm:m-auto lg:m-0">
+     <div className="hero-welcome-section ">
+    <h1 className='hero-welcome-text'>Welcome to <span className="hero-highlight relative">EFM  <img src={emLogo} alt="" className='hero-absolute'/></span> hub</h1>
+    <div className="hero-about-section-icon-text flex items-center sm:flex-col sm:items-center lg:flex-row lg:items-start sm:gap-2 lg:gap-4 sm:m-auto lg:m-0">
   <p className='hero-section-p text-center lg:text-left'>
     Designed to Lead and Built to Last
   </p>
 </div>
 
-    <img src={photo2} alt="Welcome Image" className="welcome-image" />
+    <img src={photo2} alt="Welcome Image" className="hero-welcome-image" />
 </div>
 
-      <div className="statistics-section">
-      <div className="stat-item">
-      <h1 className='number'>450</h1>
-      <p className='label'>Total Clients</p>
+      <div className="hero-statistics-section">
+      <div className="hero-stat-item">
+      <h1 className='hero-number'>450</h1>
+      <p className='hero-label'>Total Clients</p>
       </div>
-      <div className="stat-item">
-      <h1 className='number'>50</h1>
-      <p className='label'>Clients Profits</p>
+      <div className="hero-stat-item">
+      <h1 className='hero-number'>50</h1>
+      <p className='hero-label'>Clients Profits</p>
       </div>
-      <div className="stat-item">
-      <h1 className='number'>500</h1>
-      <p className='label'>Clients Contracts</p>
+      <div className="hero-stat-item">
+      <h1 className='hero-number'>500</h1>
+      <p className='hero-label'>Clients Contracts</p>
       </div>
       </div>
      

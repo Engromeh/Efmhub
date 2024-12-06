@@ -1,10 +1,9 @@
 import {
-    createBrowserRouter,
-    createRoutesFromElements,
-    Route,
-    
-  } from "react-router-dom";
-import Layout from '../Layout/Layout';
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from "react-router-dom";
+import Layout from "../Layout/Layout";
 import Homepage from "../Pages/Homepage/Homepage";
 import ReferralContestPage from "../Pages/ReferralContestPage/ReferralContestPage";
 import Login from "../Pages/Login/Login";
@@ -30,64 +29,58 @@ import NotFound from "../Pages/Notfound/NotFound";
 import TicketsTable from "../Component/DashBoard/TicketsTable/TicketsTable";
 import News from "../Component/DashBoard/News/News";
 import Currencies from "../Component/DashBoard/Currencies/Currencies.jsx";
-import InvoicePage from "../Component/DashBoard/InvoicePage/InvoicePage.jsx";
 import DirectReferrals from "../Component/DashBoard/DirectReferrals/DirectReferrals.jsx";
 import ChatTicket from "../Component/DashBoard/ChatTicket/ChatTicket.JSX";
 import Homes from "../Component/DashBoard/Homes/Homes.jsx";
-import TransferMoneyPage from "../Component/DashBoard/TransferMoneyPage/TransferMoneyPage.jsx";
+import Hero from "../Component/Homepage/HeroSection/Hero.jsx";
+import Profile from "../Component/Homepage/ProfileSection/Profile.jsx";
+import Police from "../Component/DashBoard/Police/Police.jsx";
+import Police2 from "../Component/DashBoard/Police2/Police2.jsx";
 
-const Router =createBrowserRouter(
+const Router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Homepage />} />
+        <Route path="/Hero" element={<Hero />} />
+        <Route path="/profile" element={<Profile />} />
 
-    createRoutesFromElements(
-      <>
-<Route  path='/' element={<Layout/>} >
-<Route index element={<Homepage/>} />
-<Route path="/Aboutus" element={<Aboutus />} />
-<Route path="/Membershib" element={<Membership />} />
-<Route path="/offers" element={<Payment />} />
-<Route path="/home" element={<Homepage/>} />
-<Route path="/Faq" element={<Faq />} />
+        <Route path="/Membershib" element={<Membership />} />
+        <Route path="/offers" element={<Payment />} />
+        <Route path="/home" element={<Homepage />} />
+        <Route path="/Faq" element={<Faq />} />
+        <Route path="/Aboutus" element={<Aboutus />} />
 
-<Route path="/ReferralContestPage" element={<ReferralContestPage/>} />
-</Route>
-<Route path='/Login' element={<Login/>} />
-<Route path="/ForgetPassword" element={<ForgetPassword/>} />
-<Route path="/SingUp" element={<SingUp/>} />
+        <Route path="/ReferralContestPage" element={<ReferralContestPage />} />
+      </Route>
+      <Route path="/Login" element={<Login />} />
+      <Route path="/ForgetPassword" element={<ForgetPassword />} />
+      <Route path="/SingUp" element={<SingUp />} />
 
-<Route path="/dashboard" element={<DashBoardLayout/>}>
+      <Route path="/dashboard" element={<DashBoardLayout />}></Route>
+      <Route path="/AddFunds" element={<AddFunds />} />
+      <Route path="/WithdrawFunds" element={<WithdrawFunds />} />
+      <Route path="/Currencies" element={<Currencies />} />
+      <Route path="/NewOrder" element={<NewOrder />} />
+      <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+      <Route path="/Upgreedaccount" element={<UpgradeAccount />} />
+      <Route path="/Historysection" element={<Historysection />} />
+      <Route path="/task" element={<Tasks />} />
+      <Route path="/PersonalSettings" element={<PersonalSettings />} />
+      <Route path="/CreateTicket" element={<CreateTicket />} />
+      <Route path="/Orders" element={<Orders />} />
+      <Route path="/Notfounds" element={<NotFound />} />
+      <Route path="/Tickettable" element={<TicketsTable />} />
+      <Route path="/News" element={<News />} />
+      <Route path="/DirectReferrals" element={<DirectReferrals />} />
+      <Route path="/Chatticket" element={<ChatTicket />} />
+      <Route path="/Homes" element={<Homes />} />
+      <Route path="/police" element={<Police />} />
+      <Route path="/police2" element={<Police2 />} />
 
+      {/* <Route path ='/TransferMoneyPage' element={<TransferMoneyPage/>} /> */}
+    </>
+  )
+);
 
-
-</Route>
-<Route path='/AddFunds' element={<AddFunds/>} /> 
- <Route path="/WithdrawFunds" element={<WithdrawFunds/>} />
-<Route path="/Currencies" element={<Currencies/>} />
-<Route path='/NewOrder' element={<NewOrder/>} />
-<Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
-<Route path="/Upgreedaccount" element={<UpgradeAccount/>} />
-<Route path="/Historysection" element={<Historysection/>} />
-<Route path="/task" element={<Tasks/>} />
-<Route path="/PersonalSettings" element={<PersonalSettings/>} />
-<Route path="/CreateTicket" element={<CreateTicket/>} />
-<Route path="/Orders" element={<Orders/>} />
-<Route path="/Notfounds" element={<NotFound/>} />
-<Route path="/Tickettable" element={<TicketsTable/>} />
-<Route path="/News" element={<News/>} />
-<Route path="/InvoicePage" element={<InvoicePage/>} />
-<Route path="/DirectReferrals" element={<DirectReferrals/>} />
-<Route path="/Chatticket" element={<ChatTicket/>} />
-<Route path="/Homes" element={<Homes/>} />
-<Route path ='/TransferMoneyPage' element={<TransferMoneyPage/>} />
-
-
-
-
-
-
-
-      </>  
-    )
-
-)
-
-export default Router
+export default Router;

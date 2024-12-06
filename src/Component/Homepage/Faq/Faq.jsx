@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './Faq.css';
 import { ChevronUpIcon } from '@heroicons/react/16/solid';
 import { ChevronDownIcon } from '@heroicons/react/16/solid';
 
@@ -19,10 +18,7 @@ const faqData = [
     { question: "What is the competition launched by EFM?", answer: "EFM is launching a competition where members can participate by completing specific tasks to earn points. Top participants will receive exciting prizes and rewards." },
     { question: "How can members earn money through EFM?", answer: "Members can earn money through EFM by participating in activities such as watching videos, sharing content, filling out surveys, and promoting EFM services to others." },
     { question: "What is the strategic partnership between ENG MONEY and EFM?", answer: "The strategic partnership between ENG MONEY and EFM aims to combine expertise in financial services and digital earning solutions, providing users with a secure and efficient way to earn and manage their income online." }
-]
-
-    
-
+];
 
 const Faq = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -33,20 +29,20 @@ const Faq = () => {
 
     return (
         <>
-            <h2 style={{ textAlign: 'center', color: 'black' ,fontSize:'29px',fontWeight:'bold' }}>FAQ</h2>
-            <div className="faq-container">
+            <h2 style={{ textAlign: 'center', color: 'black' ,fontSize:'29px',fontWeight:'bold',marginBottom:"2px"}}>FAQ</h2>
+            <div className="Faq-container">
                 {faqData.map((item, index) => (
-                    <div key={index} className={`faq-item ${activeIndex === index ? 'active' : ''}`}>
-                        <div className="faq-question" onClick={() => toggleAnswer(index)}>
+                    <div key={index} className={`Faq-item ${activeIndex === index ? 'Faq-active' : ''}`}>
+                        <div className="Faq-question" onClick={() => toggleAnswer(index)}>
                             {item.question}
                             {activeIndex === index ? (
-                                <ChevronUpIcon className="icon-faq"  />
+                                <ChevronUpIcon className="Faq-icon"  />
                             ) : (
-                                <ChevronDownIcon className="icon-faq" />
+                                <ChevronDownIcon className="Faq-icon" />
                             )}
                         </div>
                         {activeIndex === index && (
-                            <div className="faq-answer">
+                            <div className="Faq-answer">
                                 {item.answer}
                             </div>
                         )}

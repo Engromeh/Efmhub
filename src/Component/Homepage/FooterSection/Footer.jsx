@@ -1,4 +1,3 @@
-import "./Footer.css";
 import face from "../../../../photo/facebook.png";
 import LinkedIn from "../../../../photo/linkedin-logo.png";
 import Telegram from "../../../../photo/telegram.png";
@@ -50,14 +49,14 @@ const Footer = () => {
           </div>
           <div className="footer-newsletter">
             <h4>Join a Newsletter</h4>
-            <div className="newsletter-input">
-              <input type="email" placeholder="Enter Your Email" />
+            <div className="footer-newsletter-input">
+              <input type="email" placeholder="Enter Your Email"  className="footer-input"/>
               <button>Subscribe</button>
             </div>
-            <div className="social-icons">
-              <img src={Telegram} alt="face" className="icon" />
-              <img src={face} alt="face" className="icon" />
-              <img src={LinkedIn} alt="face" className="icon" />
+            <div className="footer-social-icons">
+              <img src={Telegram} alt="face" className="footer-icon" />
+              <img src={face} alt="face" className="footer-icon" />
+              <img src={LinkedIn} alt="face" className="footer-icon" />
             </div>
           </div>
         </div>
@@ -65,15 +64,15 @@ const Footer = () => {
           <p>Copyright ©EFM 2024</p>
           <div className="footer-contact">
             <div className="footer-links-icons">
-              <img src={Telegram} alt="Telegram Icon" className="icon" />
+              <img src={Telegram} alt="Telegram Icon" className="footer-icon" />
               @EFM_Hub
             </div>
             <div className="footer-links-icons">
-              <img src={email} alt="Email Icon" className="icon" />
+              <img src={email} alt="Email Icon" className="footer-icon" />
               support@efmhub.com
             </div>
             <div className="footer-links-icons">
-              <img src={phone} alt="Phone Icon" className="icon" />
+              <img src={phone} alt="Phone Icon" className="footer-icon" />
               +201026055342
             </div>
           </div>
