@@ -41,8 +41,8 @@ height:55px
     height: 152px;
     border-radius: 71%;
     position: absolute;
-    left: 37%;
-    bottom: 774px;
+    left: 32%;
+    bottom: 677px;
     transform: translateX(8%);
     
   }
@@ -146,11 +146,11 @@ color: black;
   @media (max-width: 768px) {
     .police-logo {
      
-        width: 70px;
-        height: 105px;
-        left: 50%; 
-        bottom: -40px; 
-        transform: translateX(-50%); 
+      width: 70px;
+      height: 105px;
+      left: 22%;
+      bottom: 900px;
+      transform: translateX(-50%);
     
     }
 
