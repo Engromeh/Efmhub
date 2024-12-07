@@ -1,0 +1,303 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.Modeltesk2-cardes1-containeres {
+  width: 70%;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #dfbc8a;
+}
+
+.Modeltesk2-cardes1-headeres {
+  background-color: #dfbc8a;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 0px 0px 10px 10px;
+  text-align: left;
+}
+
+.Modeltesk2-cardes1-body {
+  padding: 20px;
+}
+
+.Modeltesk2-task-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.Modeltesk2-task-info span {
+  margin-right: 10px;
+}
+
+.Modeltesk2-cardes1-body h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.Modeltesk2-cardes1-body p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  text-align: left;
+}
+.Modeltesk2-heilight {
+  color: #dfbc8a;
+}
+
+.Modeltesk2-container {
+  width: 70%;
+  margin: 30px auto;
+  color: #333;
+}
+
+.Modeltesk2-section {
+  border-radius: 8px;
+  margin-bottom: 20px;
+
+}
+.Modeltesk2-cardes2{
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #dfbc8a;
+}
+
+.Modeltesk2-header {
+  background-color: #dfbc8a;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 0px 0px 10px 10px;
+  text-align: left;
+}
+
+.Modeltesk2-list {
+  list-style: none;
+  padding: 15px 20px;
+  margin: 0;
+}
+
+.Modeltesk2-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.Modeltesk2-list li::before {
+  content: "●";
+  color: #dfbc8a;
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.Modeltesk2-upload-box {
+  padding: 15px 20px;
+  text-align: center;
+  border: 1px dashed #dfbc8a;
+  border-radius: 4px;
+  background-color: #fdfdfd;
+}
+
+.Modeltesk2-upload-box input {
+  display: none;
+}
+
+.Modeltesk2-upload-box label {
+  font-size: 1rem;
+  color: #999;
+  cursor: pointer;
+}
+
+.Modeltesk2-notes-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Modeltesk2-textarea {
+  width: 80%;
+
+  padding: 10px;
+  border: 1px solid #dfbc8a;
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: none;
+  height: 54px;
+}
+
+.Modeltesk2-button {
+  width: 15%;
+  background-color: #e3c78a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  height: 56px;
+}
+
+.Modeltesk2-headerform {
+  text-align: left;
+  color: #dfbc8a;
+  font-weight: bold;
+}
+
+.Modeltesk2-image-preview {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.Modeltesk2-image-preview img {
+  max-width: 100px;
+  max-height: 100px;
+  border: 1px solid #d4b98f;
+  border-radius: 8px;
+}
+
+.Modeltesk2-remove-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Modeltesk2-remove-button:hover {
+  background-color: #bd2130;
+}
+
+
+
+
+@media (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+
+  .Modeltesk2-card-container,
+  .Modeltesk2-container {
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  .Modeltesk2-task-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Modeltesk2-card-body h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .Modeltesk2-card-body p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .Modeltesk2-upload-box {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .Modeltesk2-textarea {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .Modeltesk2-button {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    text-align: center;
+  }
+
+  .Modeltesk2-card-container,
+  .Modeltesk2-container {
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .Modeltesk2-card-header,
+  .Modeltesk2-card-body h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .Modeltesk2-card-body p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .Modeltesk2-task-info {
+    font-size: 0.8rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Modeltesk2-textarea {
+    width: 100%;
+  }
+
+  .Modeltesk2-button {
+    width: 100%;
+  }
+
+  .Modeltesk2-image-preview img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .Modeltesk2-remove-button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .Modeltesk2-list li {
+    font-size: 0.9rem; 
+  }
+
+  .Modeltesk2-list li::before {
+    font-size: 1rem;
+    margin-right: 8px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .Modeltesk2-list li {
+    font-size: 0.6rem; 
+  }
+
+  .Modeltesk2-list li::before {
+    font-size: 0.8rem; 
+    margin-right: 6px;
+  }
+}

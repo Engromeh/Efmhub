@@ -12,7 +12,7 @@ const Modal = ({ onClose }) => {
     const scrollTop = scrollContainer.scrollTop;
 
     const percentageScrolled = (scrollTop / totalHeight) * 100;
-    setScrollHeight(10 + percentageScrolled); // Update the height of the scroll bar
+    setScrollHeight(10 + percentageScrolled);
   };
 
   return (
@@ -112,22 +112,20 @@ const Modal = ({ onClose }) => {
 };
 
 const App = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false); // حالة لفتح وإغلاق الموديل
+  const [isModalOpen, setIsModalOpen] = useState(false); 
 
   const openModal = () => {
-    setIsModalOpen(true); // فتح الموديل
+    setIsModalOpen(true); 
   };
 
   const closeModal = () => {
-    setIsModalOpen(false); // إغلاق الموديل
+    setIsModalOpen(false); 
   };
 
   return (
     <div>
       <button onClick={openModal}>عرض الشروط والأحكام</button>{" "}
-      {/* الزر الذي يفتح الموديل */}
       {isModalOpen && <Modal onClose={closeModal} />}{" "}
-      {/* عرض الموديل عند الضغط على الزر */}
     </div>
   );
 };
