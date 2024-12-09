@@ -36,8 +36,8 @@ import Hero from "../Component/Homepage/HeroSection/Hero.jsx";
 import Profile from "../Component/Homepage/ProfileSection/Profile.jsx";
 import Police from "../Component/DashBoard/Police/Police.jsx";
 import Police2 from "../Component/DashBoard/Police2/Police2.jsx";
-import Taskmodel from "../Component/DashBoard/Taskmodel/Taskmodel.jsx";
 import Modeltesk2 from "../Component/DashBoard/Modeltesk2/Modeltesk2.jsx";
+import CouponList from "../Component/DashBoard/CouponCard/CouponCard.jsx";
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -79,9 +79,10 @@ const Router = createBrowserRouter(
       <Route path="/Homes" element={<Homes />} />
       <Route path="/police" element={<Police />} />
       <Route path="/police2" element={<Police2 />} />
-      <Route path="/Taskmodel" element={<Taskmodel/>} />
  
      <Route path ='/Modeltesk2' element={<Modeltesk2/>} /> 
+     <Route path ='/coupon' element={<CouponList/>} /> 
+
     </>
   )
 );
